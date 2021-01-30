@@ -1,0 +1,143 @@
+html {
+  font-size: 18px;
+  line-height: 27px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+}
+
+
+
+body {
+  background-color: #F1F4F3;
+  font-family: 'Karla', sans-serif;
+  font-size: 1rem;
+}
+
+img {
+  max-width:100%;
+}
+
+h1.topheader {
+font-family: 'Cabin Sketch', cursive;
+font-weight: 700;
+font-size: 1rem;
+line-height: 100%;
+margin:0;
+}
+
+h1
+{
+font-weight: 800;
+font-size: 3rem;
+}
+
+h2,h3,h4,h5
+{
+font-weight: 700;
+font-size: 1.5rem;
+
+}
+
+nav.destkop {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  font-weight:900;
+  width:100vw;
+  z-index: 100;
+  font-size: 16px;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  text-transform: uppercase;
+  margin-right: 50px;
+}
+
+.intro {
+  background-color: #F1F4F3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
+  height:80vh;
+  align-items: center;
+  font-size: 1rem;
+  padding-bottom: 40px;
+  }
+
+.wave {
+  position: inherit;
+  height:150px;
+  background-color: #F1F4F3;
+  background-image: url('wave.svg');
+  background-size: auto 100%;
+  background-repeat: repeat-x;
+  animation: wave linear 10s infinite;
+  z-index: 50; <!-- to place on wave behind about section to avoid white line in chrome -->
+}
+
+
+@keyframes wave {
+  from {background-position: 0px 0;}
+  to {background-position: 100% 0;}
+    }
+
+.about-info-wrapper
+  {
+     /* to place on top of wave *to avoid white line in chrome */
+    z-index:60;
+    margin-top: -3px;
+       /* to place on top of wave *to avoid white line in chrome */
+    background-color:#B4DFE8;
+  }
+
+.about-info {
+  height: 800px;
+}
+
+
+
+.projects
+    {
+    background-color:#C8D5DE;
+    padding: 50px;
+    }
+
+button.projects-button {
+      background: black;
+      height:2rem;
+      width:40%;
+}
+.contact
+    {
+      background-color:#F4CF85;
+      height:100vh;
+    }
+
+
+      @media (max-width: 576px)
+      { .nav-wrapper {
+        display:none;
+        } }
+
+      // Medium devices (tablets, 768px and up)
+      @media (max-width: 768px) {
+        .nav-wrapper {
+          display:none; }
+
+      // Large devices (desktops, 992px and up)
+      @media (max-width: 992px) {
+
+        } }
+
+      // X-Large devices (large desktops, 1200px and up)
+      @media (max-width: 1200px) { ... }
+
+      // XX-Large devices (larger desktops, 1400px and up)
+      @media (max-width: 1400px) { ... }
