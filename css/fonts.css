@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Karla:400');
+
+html {font-size: 18px;
+      line-height: 1.6;  /* 28.8 */
+  }
+
+body {
+  background: white;
+  font-family: 'Karla', sans-serif;
+  font-weight: 400;
+  color: #000000;
+}
+
+p {
+  margin-top: 1.6em;
+  margin-bottom: 1.6em;
+  line-height: 1.6;
+}
+
+h1  {
+  margin-top: 0.39em;
+  margin-bottom: 0.39em;
+  font-size: 4.052rem;  /* 72.9pix */
+  font-family: 'Karla', sans-serif;
+  font-weight: 800;
+  line-height: 1.185;  /* 28.8 (spacing) x 3 is 86.4 is new line-height / 72.9 is 1,185 */
+}
+
+h2, h3, h4, h5 {
+  margin: 3rem 0 1.1rem;
+  font-family: 'Karla', sans-serif;
+  font-weight: 400;
+  line-height: 1.3;
+}
+
+h1 {
+  margin-top: 0.52rem;
+  margin-bottom: 0.52em;
+  font-size: 3.052em;
+  line-height: 1.0484;
+
+}
+
+h1.topheader {
+font-weight: 700;
+margin-top: 0.39em;
+margin-bottom: 0.39em;
+font-size: 4.052rem;  /* 72.9pix */
+font-family: 'Cabin Sketch', cursive;
+font-weight: 800;
+line-height: 0.025;  /* 28.8 (spacing) x 3 is 86.4 is new line-height / 72.9 is 1,185 */
+}
+
+h2 {font-size: 2.441rem; /* 43.939px */
+    line-height: 1.31;
+    margin-top: 0.6554;
+    margin-bottom: 0.6554;
+  }
+
+h3 {font-size: 1.953rem; /* is 35.154 px */
+    line-height: 1.6385;
+    margin-top: 0.819em;
+    margin-bottom: 0.819em;
+
+  }
+
+h4 {font-size: 1.563rem;}
+
+h5 {font-size: 1.25rem;}
+
+small, .text_small {font-size: 0.8rem;}

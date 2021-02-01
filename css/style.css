@@ -1,0 +1,154 @@
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+    box-sizing: border-box;
+}
+
+.baseline {
+  position: fixed;
+  background-image: url('baseline.png') ;
+  background-repeat: repeat;
+  width: 100vw;
+  height: 100vh;
+}
+body {
+  background-color: #F1F4F3;
+  font-family: 'Karla', sans-serif;
+}
+
+img {
+  max-width:100%;
+}
+
+nav.destkop {
+  position: fixed;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: baseline;
+  font-weight:900;
+  width:100vw;
+  z-index: 100;
+  font-size: 16px;
+  padding-top: 14.4px;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style: none;
+  text-transform: uppercase;
+  margin-right: 33px;
+}
+
+.intro {
+  background-color: #F1F4F3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
+  height:80vh;
+  align-items: center;
+  padding-bottom: 40px;
+  }
+
+.wave {
+  position: inherit;
+  height:150px;
+  background-color: #F1F4F3;
+  background-image: url('wave.svg');
+  background-size: auto 100%;
+  background-repeat: repeat-x;
+  animation: wave linear 10s infinite;
+  z-index: 50; <!-- to place on wave behind about section to avoid white line in chrome -->
+}
+
+
+@keyframes wave {
+  from {background-position: 0px 0;}
+  to {background-position: 100% 0;}
+    }
+
+.about-info-wrapper
+  {
+     /* to place on top of wave *to avoid white line in chrome */
+    z-index:60;
+    margin-top: -3px;
+       /* to place on top of wave *to avoid white line in chrome */
+    background-color:#B4DFE8;
+  }
+
+.about-info {
+  height: 100vh;
+}
+
+.projects-wrapper
+    {
+    background-color:#C8D5DE;
+    padding-top: 30px;
+    padding-bottom: 33px;
+    }
+
+.projects
+    {
+    padding-top: 33px;
+    padding-bottom: 33px;
+    }
+
+button.projects-button {
+      background-color: black;
+      border: 0;
+      height:57px;
+      width:40%;
+      color: #F4CF85;
+}
+
+button.projects-button:hover {
+      background-color: #1F1F1F;
+      height:57px;
+      width:40%;
+      color: white;
+      transform-origin: center;
+      transform: scale(1.1);
+      transition-duration: 2;
+}
+
+.contact-wrapper
+    {
+      background-color:#F4CF85;
+      height:100vh;
+    }
+
+    .contact
+        {
+          padding-top: 100px;
+        }
+
+
+
+      @media (max-width: 576px)
+      {
+
+        body {
+          font-size: 16px;
+        }
+        .nav-wrapper {
+        display:none;
+        } }
+
+      // Medium devices (tablets, 768px and below)
+      @media (max-width: 768px) {
+        .nav-wrapper {
+          display:none;
+         }
+
+      // Large devices (desktops, 992px and up)
+      @media (max-width: 992px) {
+
+        } }
+
+      // X-Large devices (large desktops, 1200px and up)
+      @media (max-width: 1200px) { ... }
+
+      // XX-Large devices (larger desktops, 1400px and up)
+      @media (max-width: 1400px) { ... }
