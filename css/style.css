@@ -84,6 +84,7 @@ nav ul li {
 
 .projects-wrapper
     {
+    width: 100vw;
     background-color:#C8D5DE;
     padding-top: 30px;
     padding-bottom: 33px;
@@ -115,6 +116,7 @@ button.projects-button:hover {
 
 .contact-wrapper
     {
+      width: 100vw;
       background-color:#F4CF85;
       height:100vh;
     }
