@@ -19,6 +19,7 @@ p {
   margin-top: 1.6em;
   margin-bottom: 1.6em;
   line-height: 1.6;
+  letter-spacing: 0.4px;
 }
 
 h1  {
@@ -96,6 +97,4 @@ line-height: 0.025;  /* 28.8 (spacing) x 3 is 86.4 is new line-height / 72.9 is 
 
 h1 {
   text-align: center;
-}
-
 }

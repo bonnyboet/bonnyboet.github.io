@@ -4,21 +4,24 @@ html {
     box-sizing: border-box;
 }
 
-.baseline {
-  position: fixed;
-  background-image: url('baseline.png') ;
-  background-repeat: repeat;
-  width: 100vw;
-  height: 100vh;
-}
 body {
   background-color: #F1F4F3;
   font-family: 'Karla', sans-serif;
-
 }
 
 img {
   max-width:100%;
+}
+
+.baseline {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-image: url('baseline.png') ;
+  background-repeat: repeat;
+  width: 100vw;
+  height: 100vh;
+  z-index: 130;
 }
 
 /* navigation */
@@ -46,12 +49,15 @@ nav ul li {
 nav a {
   color: #262626;
   text-decoration: none;
+
 }
 
 nav a:hover {
-  color: #898989;
+  color: #4B4B4B;
   text-decoration: none;
-  border-bottom: 2px solid black;
+  border-bottom: 5px solid #f7c9d9;
+  transition: 0.2s;
+
 }
 
 
@@ -119,33 +125,43 @@ nav a:hover {
 
 .projects-wrapper
     {
-    background-color:#C8D5DE;
+    background-color:#c8d5de; /* grey */
     padding-top: 30px;
     padding-bottom: 33px;
     }
 
 .projects
     {
-    padding-top: 70px;
+    padding-top: 30px;
     padding-bottom: 33px;
     }
 
+.projects-top
+        {
+        padding-top: 70px;
+        padding-bottom: 0px;
+        }
+
 button.projects-button {
-      background-color: black;
+      background-color: #313131;
       border: 0;
       height:57px;
       width:40%;
       color: #F4CF85;
+      font-family: 'Roboto Mono', monospace;
+      font-size: 0.8em;
 }
 
 button.projects-button:hover {
-      background-color: #1F1F1F;
+      background-color: #3B3B3B;
       height:57px;
       width:40%;
-      color: white;
       transform-origin: center;
-      transform: scale(1.1);
+      transform: scale(1.04);
       transition-duration: 2;
+      transition-timing-function: ease-in-out;
+      transition: 0.5s;
+      font-size:0.9em;
 }
 
 .contact-wrapper
@@ -227,6 +243,8 @@ button.projects-button:hover {
           transform-origin: center;
         }
        }
+
+
 
       // Medium devices (tablets, 768px and below)
       @media (max-width: 768px) {
