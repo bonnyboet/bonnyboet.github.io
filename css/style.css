@@ -168,12 +168,142 @@ button.projects-button:hover {
 .contact-wrapper
     {
       background-color:#F4CF85;
-      height:100vh;
     }
 
-.contact
+.contact-title
     {
       padding-top: 100px;
+    }
+
+#h4notop {
+  margin-top: 0px;
+}
+
+    form {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      border-radius: 10px;
+      padding: 80px 20px 20px 20px;
+      text-align: left;
+      max-width:500px;
+      margin-left: 1em;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+    }
+
+    input {
+      border: none;
+      border: 2px solid transparent;
+      border-radius: 5px;
+      padding: 13px;
+    }
+
+    input:hover {
+      background-color: #FFFFFF;
+      color: #4d5356;
+      border-radius: 5px;
+      border: 2px solid #F4CF85;
+    }
+
+    input:active {
+      background-color: #FFFFFF;
+      color: #4d5356;
+      border-radius: 5px;
+      border: 2px solid #F4CF85;
+    }
+
+    input:focus {
+      background-color: #FFFFFF;
+      color: #000000;
+      border-radius: 5px;
+      border: 2px solid #F4CF85;
+      outline: 0px;
+    }
+
+
+    .form-question {
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+
+    .form-group {
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+
+    label
+    {
+      font-weight: 600;
+      padding-bottom: 3px;
+      margin:0px;
+    }
+
+    textarea {
+      outline: none;
+      font-size:1em;
+      border: 2px solid transparent;
+      border-radius: 5px;
+      padding: 13px;
+      margin: 0px;
+      min-height: 200px;
+      resize: vertical;
+    }
+
+    textarea:hover {
+      background-color: #FFFFFF;
+      color: #4d5356;
+      border-radius: 5px;
+      border: 2px solid #F4CF85;
+    }
+
+    textarea:active {
+      color: #4d5356;
+      border-radius: 5px;
+      border: 2px solid #F4CF85;
+    }
+
+    button[type="submit"] {
+      background-color: ##C8D5DE;
+      font-size:1em;
+      border: 2px solid transparent;
+      border-radius: 5px;
+      padding: 13px;
+      max-width: 50%;
+      text-align: center;
+      margin-top: 8px;
+    }
+
+    button[type="submit"]:focus {
+      background-color: #94979a;
+      font-size:1em;
+      color: #E7D2CC;
+      border: 2px solid #E7D2CC;
+      outline: 0px;
+      border-radius: 5px;
+      padding: 13px;
+    }
+
+    button[type="submit"]:active {
+      background-color: #94979a;
+      border: 2px solid #868B8E;
+      font-size:1em;
+      color: #E7D2CC;
+      border-radius: 5px;
+      padding: 13px;
+    }
+
+    button[type="submit"]:hover {
+      background-color: #EAEAEA;
+      border: 2px solid transparent;
+      font-size:1em;
+      outline: 0px;
+      border-radius: 5px;
+      padding: 13px;
     }
 
 
@@ -221,6 +351,16 @@ button.projects-button:hover {
 
         .wave {
           animation: wave linear 30s infinite;
+        }
+
+        form {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-around;
+          border-radius: 10px;
+          text-align: left;
+          max-width:500px;
+          margin-left: 0px;
         }
 
         #about-picture {
