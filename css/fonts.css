@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Karla:400');
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@700&display=swap');
 
 html {font-size: 18px;
       line-height: 1.6;  /* 28.8 */
@@ -47,14 +48,13 @@ h1 {
 }
 
 h1.topheader {
-font-weight: 700;
 margin-top: 0.39em;
-margin-bottom: 0.3em;
+margin-bottom: 0.4em;
 font-size: 4.052em;  /* 72.9pix */
-font-family: 'Cabin Sketch', cursive;
+font-family: 'Cabin Sketch';
 letter-spacing: 5px;
-font-weight: 800;
 line-height: 0.025;  /* 28.8 (spacing) x 3 is 86.4 is new line-height / 72.9 is 1,185 */
+font-weight: 800;
 }
 
 h2 {font-size: 2.441em; /* 43.939px */

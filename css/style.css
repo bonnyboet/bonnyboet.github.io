@@ -4,6 +4,8 @@ html {
     box-sizing: border-box;
 }
 
+var(--a-hover);
+
 body {
   background-color: #F1F4F3;
   font-family: 'Karla', sans-serif;
@@ -37,14 +39,14 @@ nav.destkop {
   z-index: 100;
   font-size: 16px;
   padding-top: 14.4px;
-
+  height: 150px;
 }
 
 nav ul li {
   display: inline-block;
   list-style: none;
   text-transform: uppercase;
-  margin-right: 33px;
+  margin-right: 35px;
 }
 
 nav a {
@@ -56,7 +58,7 @@ nav a {
 nav a:hover {
   color: #4B4B4B;
   text-decoration: none;
-  border-bottom: 5px solid #f7c9d9;
+  border-bottom: 5px solid #DFDFDF;
   transition: 0.2s;
 
 }
@@ -82,16 +84,6 @@ nav a:hover {
 }
 
 
-
-
-@keyframes scrolldown
- {
-   50% {
-     transform-origin: center;
-     transform:translateY(8px);
-   }
-
-}
 
 .wave {
   position: inherit;
@@ -143,26 +135,26 @@ nav a:hover {
         padding-bottom: 0px;
         }
 
-button.projects-button {
+a.projects-button {
+      text-decoration: none;
       background-color: #313131;
-      border: 0;
-      height:57px;
-      width:40%;
-      color: #F4CF85;
+      border-radius: 50px;
+      border: 0px;
+      padding: 15px 30px 15px 30px;
+      color: #FFFFFF;   /* #F4CF85 */
       font-family: 'Roboto Mono', monospace;
-      font-size: 0.8em;
+      font-size: 0.6em;
+      border-radius: 30px;
 }
 
-button.projects-button:hover {
-      background-color: #3B3B3B;
-      height:57px;
-      width:40%;
+a.projects-button:hover {
+      border: 3px solid #FFFFFF;
+      padding: 15px 50px 15px 50px;
       transform-origin: center;
-      transform: scale(1.04);
-      transition-duration: 2;
+      transform: scale(1.02);
+      transition-duration: 0.5s;
       transition-timing-function: ease-in-out;
-      transition: 0.5s;
-      font-size:0.9em;
+      transition: 0.2s;
 }
 
 .contact-wrapper
@@ -175,8 +167,23 @@ button.projects-button:hover {
       padding-top: 100px;
     }
 
-#h4notop {
-  margin-top: 0px;
+.notop {
+  margin-top: 1.1em;
+}
+
+a.contact-link {
+  font-weight:500;
+  color: #262626;
+  text-decoration: none;
+  font-family: 'Roboto Mono', monospace;
+
+}
+
+a.contact-link:hover {
+  color: #4B4B4B;
+  text-decoration: none;
+  border-bottom: 8px solid #424242;
+  transition: 0.2s;
 }
 
     form {
@@ -184,10 +191,9 @@ button.projects-button:hover {
       flex-direction: column;
       justify-content: space-around;
       border-radius: 10px;
-      padding: 80px 20px 20px 20px;
+      padding: 30px 20px 0px 0px;
       text-align: left;
       max-width:500px;
-      margin-left: 1em;
     }
 
     .form-group {
@@ -200,7 +206,8 @@ button.projects-button:hover {
       border: none;
       border: 2px solid transparent;
       border-radius: 5px;
-      padding: 13px;
+      padding: 11px;
+      font-size: 0.9em;
     }
 
     input:hover {
@@ -228,29 +235,29 @@ button.projects-button:hover {
 
     .form-question {
       font-weight: 900;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     .form-group {
       font-weight: 900;
-      margin-bottom: 12px;
+      margin-bottom: 10px;
     }
 
     label
     {
-      font-weight: 600;
+      font-weight: 500;
       padding-bottom: 3px;
       margin:0px;
     }
 
     textarea {
       outline: none;
-      font-size:1em;
+      font-size: 0.9em;
       border: 2px solid transparent;
       border-radius: 5px;
       padding: 13px;
       margin: 0px;
-      min-height: 200px;
+      min-height: 180px;
       resize: vertical;
     }
 
@@ -332,6 +339,14 @@ button.projects-button:hover {
   display: none;
 }
 
+@keyframes scrolldown
+ {
+   50% {
+     transform-origin: center;
+     transform:translateY(8px);
+   }
+
+}
 
 
 
