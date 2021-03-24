@@ -55,41 +55,41 @@ table {
 html {
   color: #1F2C6B;
   background-color: #f0f7ee;
-  font-size: 15px;
-  line-height: 21px;
+  font-size: 14px;
+  line-height: 20px;
   box-sizing: border-box;
   scroll-behavior: smooth; }
 
 body {
   font-size: 1em;
-  line-height: 2.52001em;
+  line-height: 2.57143em;
   font-family: 'Kosugi Maru', sans-serif;
   letter-spacing: .5px; }
 
 h1 {
-  font-size: 2.06667em;
-  line-height: 3.3871em;
-  margin-top: 0.67742em;
-  margin-bottom: 1.35484em;
+  font-size: 2.07143em;
+  line-height: 3.44828em;
+  margin-top: 0.68966em;
+  margin-bottom: 1.37932em;
   font-family: 'Yusei Magic', sans-serif; }
 
 h2 {
-  font-size: 1.73334em;
-  line-height: 3.23077em;
-  margin-top: 0.8077em;
-  margin-bottom: 1.61539em; }
+  font-size: 1.71429em;
+  line-height: 3.33334em;
+  margin-top: 0.83334em;
+  margin-bottom: 1.66667em; }
 
 h3 {
-  font-size: 1.46667em;
-  line-height: 2.86364em;
-  margin-top: 0.95455em;
-  margin-bottom: 1.9091em; }
+  font-size: 1.42858em;
+  line-height: 3em;
+  margin-top: 1em;
+  margin-bottom: 2em; }
 
 h4 {
-  font-size: 1.2em;
-  line-height: 2.33334em;
-  margin-top: 1.16667em;
-  margin-bottom: 2.33334em; }
+  font-size: 1.21429em;
+  line-height: 2.35295em;
+  margin-top: 1.17648em;
+  margin-bottom: 2.35295em; }
 
 p,
 ol,
@@ -97,8 +97,8 @@ pre,
 table,
 img,
 blockquote {
-  margin-top: 2.8em;
-  margin-bottom: 1.4em; }
+  margin-top: 2.85715em;
+  margin-bottom: 1.42858em; }
 
 ul ul,
 ol ol,
@@ -245,27 +245,28 @@ border-bottom: 0px;
 }
 
 */
-.sidenav-desktop {
+.sidenav {
   position: fixed;
   display: flex;
-  flex-flow: column;
-  top: 100px;
-  right: -40px;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: space-around;
+  top: auto;
+  right: auto;
+  width: 100%;
   height: auto;
-  width: 180px;
+  bottom: 1em;
   z-index: 150; }
-  @media (max-width: 599px) {
-    .sidenav-desktop {
+  @media (min-width: 1200px) {
+    .sidenav {
+      position: fixed;
       display: flex;
-      flex-direction: row;
-      justify-content: space-around;
-      align-content: space-around;
-      top: auto;
-      right: auto;
-      width: 100%;
-      height: auto;
-      bottom: 1em; } }
-  .sidenav-desktop a {
+      flex-flow: column;
+      justify-content: flex-start;
+      top: 100px;
+      right: -40px;
+      width: 180px; } }
+  .sidenav a {
     color: #1F2C6B;
     text-decoration: none;
     border-radius: 30px;
@@ -275,19 +276,19 @@ border-bottom: 0px;
     font-size: 0.8em;
     height: auto; }
     @media (max-width: 599px) {
-      .sidenav-desktop a {
+      .sidenav a {
         font-size: 0.6em;
         padding: 0.5em 1em 0.5em 1.5em; } }
-    .sidenav-desktop a::before {
+    .sidenav a::before {
       content: url(../assets/arrow.svg); }
       @media (max-width: 599px) {
-        .sidenav-desktop a::before {
+        .sidenav a::before {
           content: url(../assets/arrow-mobile.svg); } }
 
 section {
   scroll-margin-top: 20px;
-  margin-top: 2.8em;
-  margin-bottom: 2.8em;
+  margin-top: 2.85715em;
+  margin-bottom: 2.85715em;
   box-shadow: 10px 20px 30px #E1E1E1AA; }
   section img.shadow {
     box-shadow: 10px 10px 20px lightgrey; }
@@ -318,6 +319,9 @@ section {
     height: 60vh;
     padding-top: 120px;
     margin: 0; }
+    @media (max-width: 599px) {
+      section.intro {
+        padding-top: 30vh; } }
     section.intro p {
       max-width: 600px;
       z-index: 90;
@@ -342,7 +346,6 @@ section {
     width: 100%;
     margin-top: 0;
     margin-bottom: 0;
-    top: -8em;
     clip-path: polygon(0% 0%, 50% 17%, 100% 0%, 100% 83%, 50% 100%, 0px 83%);
     background-image: linear-gradient(rgba(240, 247, 238, 0.45), rgba(240, 207, 101, 0.45)), url(../assets/hero-home.jpg);
     background-repeat: no-repeat;
@@ -356,7 +359,13 @@ section {
         top: -5em; } }
     @media (min-width: 600px) {
       section.hero {
-        top: -12em; } }
+        top: -15em; } }
+    @media (min-width: 900px) {
+      section.hero {
+        top: -15em; } }
+    @media (min-width: 1200px) {
+      section.hero {
+        top: -9em; } }
 
 .container {
   position: relative;
