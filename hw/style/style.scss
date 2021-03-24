@@ -1,0 +1,420 @@
+/* CSS compiled from SCSS. */
+/* --------------------------------------- */
+@import "_variables";
+@import "sassy-gridlover";
+@import "_resets";
+@import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Noto+Sans+JP&family=Yusei+Magic&display=swap');
+
+html {
+  color: $text-blue;
+  background-color: $white;
+  @include sgl-html($font-size: $sgl-base-font-size);
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+    @include sgl-body($line-height-step: 1.8, $unit: $sgl-base-unit);
+    font-family: 'Kosugi Maru', sans-serif;
+    letter-spacing: .5px;
+}
+
+h1{
+  @include sgl-heading(4, 0, 1, 2);
+  font-family: 'Yusei Magic', sans-serif;
+}
+
+h2{
+  @include sgl-heading(3, 0, 1, 2);
+}
+
+h3{
+  @include sgl-heading(2, 0, 1, 2);
+}
+
+h4{
+  @include sgl-heading(1, 0, 1, 2);
+}
+
+p,
+ol,
+pre,
+table,
+img,
+blockquote
+ {
+    @include sgl-margins(2, 1);
+}
+
+ul ul,
+ol ol,
+ul ol,
+ol ul {
+    @include sgl-margins(0, 0);
+}
+
+/* images */
+img {
+  max-width: 100%;
+	height: auto;
+   @include for-phone-only {
+     margin-top: 1em;
+     margin-bottom: 1em;
+   }
+}
+
+/*grid outline */
+.sectionheader {
+grid-area: hd;
+width: 100%;
+}
+
+.sectionsubheader {
+grid-area: subhd;
+width: 100%;
+}
+
+.sectionsubheader2 {
+grid-area: subhd;
+width: 100%;
+}
+
+.sectioncontent {
+  grid-area: p;
+}
+
+.sectioncontent2 {
+  grid-area: p2;
+}
+
+.sectionphoto {
+  grid-area: img;
+}
+
+.sectionphoto2 {
+  grid-area: img2;
+}
+
+
+/*navigation */
+nav {
+  position: fixed;
+  top: 0px;
+  width: 100%;
+  z-index: 100;
+  height: auto;
+  background-color: $bluenav;
+  letter-spacing: 2px;
+  line-height: 0.5;
+
+    &.nav-destkop ul {
+      margin-bottom: 1em;
+      padding: 1.5em 1.5em 1.5em 2.5em;   /* 30px 10px 5px 5px */
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      @include for-phone-only {
+        display: none;
+      }
+    }
+
+    &.nav-destkop a {
+      margin-left: 2em;
+      margin-right: 2em;
+      color: $white;
+      padding: 10px;
+      text-decoration: none;
+      border-bottom: 0.3em solid $white;
+
+    &:hover {
+      color: $orange;
+      border-bottom: 0.3em solid $orange;
+    }
+    &:active {
+      color: $orange;
+      border-bottom: 0.3em solid $orange;
+    }
+    &:visited {
+        color: $white;
+      }
+    }
+
+    &.nav-mobile {
+    display: none;
+    top: 0;
+    left: 0;
+    height: 50vh;
+    padding: 50px 10px 10px 10px;
+
+    & ul{
+    height: 50vh;
+    display: flex;
+    display: none;
+    list-style: none;
+    flex-direction: column;
+    justify-content:  space-around;
+    align-content: space-around;
+    text-align: center;
+
+    & a {
+      color: $white;
+      text-decoration: none;
+      border-bottom: 2px solid $white;
+    &:active {
+      color: $orange;
+      border-bottom: 3px solid $orange;
+    }
+    &:visited {
+        color: $white;
+      }
+  }
+    }
+    }
+}
+
+#toggleNav {
+  position: fixed;
+  right: 2em;
+  color: $white;
+  right: 14em;
+  z-index: 120;
+}
+
+#close-nav-mobile {
+  position: fixed;
+  top: 1em;
+  right: 2em;
+  color: white;
+  font-size: 2em;
+  z-index: 130;
+
+  @include for-desktop-up {
+    display: none;
+  };
+}
+
+/*
+
+
+@include for-phone-only {
+display: none;
+border-bottom: 0px;
+&:active {
+border-bottom: 2px;
+}
+&:hover {
+border-bottom: 0px;
+}
+}
+
+*/
+
+.sidenav-desktop {
+  position: fixed;
+  display: flex;
+  flex-flow: column;
+  top: 100px;
+  right: -40px;
+  height: 200px;
+  width: 180px;
+  z-index: 150;
+
+  @include for-phone-only {
+  display: flex;
+  flex-direction: row;
+  justify-content:  space-around;
+  align-content: space-around;
+  top: auto;
+  right: auto;
+  width: 100%;
+  height: auto;
+  bottom: 1em;
+  }
+
+  & a {
+    color: $text-blue;
+    text-decoration: none;
+    border-radius: 30px;
+    background-color: $yellow;
+    padding: 5px 10px 5px 15px;
+    margin-bottom: 20px;
+    font-size: 0.8em;
+    // box-shadow: 0px 3px 6px #B6BFB4;
+
+      &::before {
+      content: url(../assets/arrow.svg);
+      }
+    }
+  }
+
+section {
+    @include anchor-scroll;
+    @include sgl-margins(2, 2);
+    box-shadow: 10px 20px 30px #E1E1E1AA;
+    & img.shadow {
+      box-shadow: 10px 10px 20px lightgrey;
+    }
+
+    & a.section-button {
+      color: $text-blue;
+      text-decoration: none;
+      border-radius: 30px;
+      background-color: $white;
+      border: 2px solid $text-blue;
+      padding: 15px;
+      margin-top: 5em;
+      margin-bottom: 20px;
+      font-size: 1em;
+      box-shadow: 1px 1px 1px lightgrey;
+
+        &:hover {
+          border: 2px solid $orange;
+          box-shadow: 1px 1px 5px grey;
+        }
+        &::before {
+        content: url(../assets/arrow.svg);
+        }
+      }
+
+  &.intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: $yellow;
+    max-width: 100%;
+    height: 60vh;
+    padding-top: 120px;
+    margin: 0;
+
+
+      & p {
+        max-width: 600px;
+        z-index: 90;
+        padding-bottom: 100px;
+        line-height: 4em;
+        @include for-phone-only {
+        max-width: 94vw;
+        }
+      }
+
+      & h1 {
+        margin-bottom: 1em;
+        line-height: 1em;
+
+        @include for-phone-only {
+        max-width: 94vw;
+        font-size: 1.8em;
+        }
+      }
+
+
+  }
+
+&.hero {
+  position: relative;
+  height: 90vh;
+  width: 100%;
+  margin-top: 0;
+  margin-bottom: 0;
+  top: -8em;
+  clip-path: polygon(0% 0%, 50% 17%, 100% 0%, 100% 83%, 50% 100%, 0px 83%);
+  background-image:
+      /* top, transparent red */
+      linear-gradient(
+        rgba(240, 247, 238, 0.45),
+        rgba(240, 207, 101, 0.45)
+      ),
+      /* your image */
+      url(../assets/hero-home.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-clip: border-box;
+  filter: drop-shadow(0px 10px 105px rgba(0,0,0,0.1));
+
+  @include for-phone-only {
+  clip-path: polygon(0% 0%, 50% 7%, 100% 0%, 100% 93%, 50% 100%, 0px 93%);
+  top: -5em;
+  }
+
+  }
+}
+
+
+.container
+ {
+   position: relative;
+   top: -7em;
+   max-width: 1100px;
+   padding-bottom: 2em;
+   margin-bottom: 0px;
+   border-radius: 5px;
+   margin-left: auto;
+   margin-right: auto;
+   background-color: $white;
+ }
+
+ section.padding {
+    padding: 4em;
+      @include for-phone-only {
+        padding: 1em;
+      }
+ }
+
+
+.home-intro, .home-homestay {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-gap: 0em 6em;
+  grid-template-areas: "hd hd"
+                       "p img";
+
+       @include for-phone-only {
+         grid-template-columns: 1fr;
+         grid-gap: 0em;
+         grid-template-areas: "hd"
+                              "img"
+                              "p";
+     }
+
+}
+
+.home-participants {
+  background-color: $white;
+  height: 10em;
+  padding: 4em;
+}
+
+.home-sistercities {
+  display: grid;
+  max-width: 100%;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto auto;
+  grid-gap: 0em 6em;
+  grid-template-areas: "hd hd"
+                       "img p"
+                       "p2 img2";
+
+       @include for-phone-only {
+         grid-template-columns: 1fr;
+         grid-template-rows: auto auto;
+         grid-gap: 0em;
+         grid-template-areas: "hd"
+                              "p"
+                              "img"
+                              "p2"
+                              "img2";
+     }
+
+}
+
+footer {
+  display: block;
+  flex-direction: row;
+  background-color: $yellow;
+  margin-top: 30px;
+  z-index: 180;
+  padding: 3em;
+}
