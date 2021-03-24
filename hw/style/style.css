@@ -262,11 +262,12 @@ border-bottom: 0px;
     padding: 5px 10px 5px 15px;
     margin-bottom: 20px;
     font-size: 0.8em; }
+    @media (max-width: 599px) {
+      .sidenav-desktop a {
+        font-size: 0.6em; } }
     .sidenav-desktop a::before {
-      content: url(../assets/arrow.svg); }
-      @media (max-width: 599px) {
-        .sidenav-desktop a::before {
-          display: none; } }
+      content: url(../assets/arrow.svg);
+      font-size: 0.5em; }
 
 section {
   scroll-margin-top: 20px;
