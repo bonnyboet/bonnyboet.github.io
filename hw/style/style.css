@@ -264,6 +264,9 @@ border-bottom: 0px;
     font-size: 0.8em; }
     .sidenav-desktop a::before {
       content: url(../assets/arrow.svg); }
+      @media (max-width: 599px) {
+        .sidenav-desktop a::before {
+          display: none; } }
 
 section {
   scroll-margin-top: 20px;
@@ -320,7 +323,7 @@ section {
     width: 100%;
     margin-top: 0;
     margin-bottom: 0;
-    top: -7em;
+    top: -8em;
     clip-path: polygon(0% 0%, 50% 17%, 100% 0%, 100% 83%, 50% 100%, 0px 83%);
     background-image: linear-gradient(rgba(240, 247, 238, 0.45), rgba(240, 207, 101, 0.45)), url(../assets/hero-home.jpg);
     background-repeat: no-repeat;
