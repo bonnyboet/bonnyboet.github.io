@@ -291,6 +291,7 @@ section {
   section.intro {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     text-align: center;
     background-color: #f0cf65;
@@ -319,7 +320,7 @@ section {
     width: 100%;
     margin-top: 0;
     margin-bottom: 0;
-    top: -8em;
+    top: -7em;
     clip-path: polygon(0% 0%, 50% 17%, 100% 0%, 100% 83%, 50% 100%, 0px 83%);
     background-image: linear-gradient(rgba(240, 247, 238, 0.45), rgba(240, 207, 101, 0.45)), url(../assets/hero-home.jpg);
     background-repeat: no-repeat;
@@ -331,6 +332,9 @@ section {
       section.hero {
         clip-path: polygon(0% 0%, 50% 7%, 100% 0%, 100% 93%, 50% 100%, 0px 93%);
         top: -5em; } }
+    @media (min-width: 600px) {
+      section.hero {
+        top: -12em; } }
 
 .container {
   position: relative;
