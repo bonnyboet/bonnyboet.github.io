@@ -16,11 +16,15 @@
   <meta property="og:url" content="https://example.com" />
   <meta property="og:type" content="website" />
 
+  <!-- favicon -->
+  <link rel="icon" type="image/svg+xml" href="svg/starfish.svg">
+
   <!-- stylesheets -->
   <link rel="stylesheet" href="css/bootstrap-reboot.css">
   <link rel="stylesheet" href="css/bootstrap-grid.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/fonts.css">
+
 
   <!-- google fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -30,9 +34,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 
-  <!-- scrips -->
-  <script src="https://kit.fontawesome.com/80d339b1b8.js" crossorigin="anonymous"></script>
+  <!-- Jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script type="text/javascript" src="header.js"></script>
+  <script type="text/javascript" src="nav.js"></script>
+
+
+  <!-- icons -->
+  <script src="https://kit.fontawesome.com/80d339b1b8.js" crossorigin="anonymous"></script>
+
 </head>
 
 
@@ -42,14 +52,14 @@
 <header>
 <!-- Top Navigation -->
   <div class="nav-wrapper"> <!-- wrapper to enable flexbox-->
-    <nav class="destkop" >    <!-- destkop nav only visible large screens -->
-      <div id="nav-lang">     <!-- Language -->
+    <nav class="desktop">    <!-- destkop nav only visible large screens -->
+      <div>     <!-- Language -->
         <ul>
           <li lang="ja"><a href="#about">日本語</a></li>
         </ul>
       </div>
 
-      <div id="nav-menu">    <!-- central menu -->
+      <div>    <!-- central menu -->
         <ul>
           <li><a href="#about" aria-label="Jump to About">About</a></li>
           <li><a href="#projects" aria-label="Jump to Projects">Projects</a></li>
@@ -57,12 +67,28 @@
         </ul>
       </div>
 
-      <div id="nav-icons">   <!-- Social media icons -->
+      <div>   <!-- Social media icons -->
         <ul class="social-media">
           <li><a href="https://www.linkedin.com/in/bonny-boet-7950b3147/" aria-label="Find me on Linkedin (external link)" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
           <li><a href="https://www.instagram.com/bonnyboet/" aria-label="Find me on instagram (external link)" target="_blank"><i class="fab fa-instagram-square fa-lg"></i></a>
         </ul>
       </div>
+    </nav>
+
+    <div class="mobile-closed">
+    <span id="mobile-closed">MENU</span>
+    </div>
+
+    <nav class="mobile">    <!-- mobile nav only visible on phone -->
+
+          <ul>
+          <li><a href="#about" aria-label="Jump to About">About</a></li>
+          <li><a href="#projects" aria-label="Jump to Projects">Projects</a></li>
+          <li><a href="#contact" aria-label="Jump to Contact info">Contact</a></li>
+          <li lang="ja" id="switchlang-to-jp"><a href="#about">日本語</a></li>
+          <li id="mobile-opentoclose">X</li>
+          </ul>
+
     </nav>
   </div>
 
@@ -72,10 +98,10 @@
       <div class="intro">
               <h1 class="topheader">Bonny Boet</h1>
 
-              <p class="topheader-paragraph">Hi, my name is Bonny. I am an aspiring web designer <br class="mobile-hide">based in Japan. Please <strong>scroll down</strong>to take a dive into my portfolio.</p>
+              <p class="topheader-paragraph">Hi, my name is Bonny. I am an aspiring web designer <br class="mobile-hide">based in Japan. Please <strong>scroll down </strong>to take a dive into my portfolio.</p>
 
               <a id="scrolldown" aria-label="Scroll down to main content" href="#about">
-                <svg id="hero-scrolldown" alt="Circle with downwards arrow. Click to scroll down to main content." data-name="Component 1 – 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 62">
+                <svg id="hero-scrolldown" role="img" aria-label="Click to scroll down to main content" alt="Circle with downwards arrow." data-name="Component 1 – 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 62 62">
                 <circle id="hero-scrolldown-ellipse" data-name="Ellipse 1" cx="31" cy="31" r="31" fill="#f4cf85"/>
                 <path id="Polygon_1" data-name="Polygon 1" d="M9,0l9,18H0Z" transform="translate(40 40) rotate(180)" fill="#fff"/>
                 </svg>
@@ -222,18 +248,18 @@
         <form action="mail.php" method="POST" id="survey-form">
 
             <div class="form-group">
-              <label for="name-label" id="name-label" class="form-question">Name: </label>
-              <input type="text" id="name" name="name-label" placeholder="John Doe" required>
+              <label for="name" id="name-label" class="form-question">Name: </label>
+              <input type="text" id="name" name="name-label" placeholder="Name" required>
             </div>
 
             <div class="form-group">
-              <label for="email-label" id="email-label" class="form-question">E-mail:</label>
-              <input type="email" id="email" name="email-label" placeholder="bonny.boet@gmail.com" required>
+              <label for="email" id="email-label" class="form-question">E-mail:</label>
+              <input type="email" id="email" name="email-label" placeholder="@" required>
             </div>
 
             <div class="form-group">
-              <label for="email-label" id="email-label" class="form-question">Message:</label>
-              <textarea id="comments" name="comments" placeholder="Type your message here."></textarea>
+              <label for="message" id="email-label" class="form-question">Message:</label>
+              <textarea id="message" name="message" placeholder="Message"></textarea>
             </div>
 
             <div class="form-group">
@@ -252,6 +278,6 @@
 <img src="svg/starfish.svg" id="starfish" alt="starfish illustration">2021 Bonny Boet @ www.bonnyboet.github.io
 </footer>
 
-  </body>
+</body>
 
 </html>
