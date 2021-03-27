@@ -16,8 +16,16 @@ img {
 }
 
 /* navigation */
+.mobile-closed {
+  display: none;
+}
 
-nav.destkop {
+nav.mobile {
+  display: none;
+
+}
+
+nav.desktop {
   position: fixed;
   display: flex;
   flex-direction: row;
@@ -50,6 +58,7 @@ nav a:hover {
   border-bottom: 5px solid #DFDFDF;
   transition: 0.2s;
 }
+
 /* end navigation */
 
 
@@ -207,8 +216,11 @@ textarea:hover {
 
 textarea:active {
   color: #4d5356;
-  border-radius: 5px;
   border: 2px solid #F4CF85;
+}
+
+textarea:focus {
+  border: 2px solid black;
 }
 
 button[type="submit"] {
@@ -261,7 +273,7 @@ input:active {
 
 input:focus {
   color: #000000;
-  border: 2px solid #F4CF85;
+  border: 2px solid black;
   outline: 0px;
 }
 
@@ -290,7 +302,7 @@ footer {
   height: 5em;
   font-size: 0.6em;
   font-family: 'Roboto Mono', monospace;
-  color: #C8D5DE;
+  color: #F1F4F3;
   background-color:#826754;
 }
 
@@ -353,13 +365,56 @@ footer {
 
         @media (max-width: 599px) {
 
-        .mobile-hide {
+        nav.desktop {
           display: none;
         }
 
-        .nav-wrapper {
-        display:none;
+        .mobile-closed {
+          display: flex;
+          position: fixed;
+          width: 100%;
+          flex-direction: row;
+          justify-content: flex-end;
+          background-color: transparent;
+          padding: 0.7em;
+          font-weight: 800;
         }
+
+        #mobile-closed {
+          background-color: white;
+          padding: 0.3em;
+          border: 1px white;
+          border-radius: 5px;
+        }
+
+        nav.mobile {
+          display: none;
+          position: fixed;
+          width: 100%;
+          height: auto;
+          padding: 3em;
+          flex-direction: column;
+          justify-content: space-around;
+          align-items: space-around;
+          background-color: #FFFFFFEE;
+          z-index: 500;
+        }
+
+        nav.mobile ul {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        line-height: 5em;
+        }
+
+        #switchlang-to-jp {
+        font-size: 0.8em;
+        }
+
+        /* welcome message */
+        .intro {
+          height:85vh;
+          }
 
         .about-info {
           text-align: center;
