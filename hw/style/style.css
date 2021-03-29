@@ -348,7 +348,8 @@ section {
         section.intro p {
           max-width: 80vw;
           line-height: 3em;
-          padding-bottom: 200px; } }
+          padding-bottom: 210px;
+          font-size: 0.9em; } }
     section.intro h1 {
       margin-bottom: 1em;
       line-height: 1em; }
