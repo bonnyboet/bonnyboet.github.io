@@ -472,7 +472,7 @@ section {
     display: flex;
     flex-direction: row;
     align-items: flex-end;
-    background-image: linear-gradient(rgba(240, 247, 238, 0.45), rgba(240, 207, 101, 0.45)), url(../assets/hero-about-2.jpg);
+    background-image: linear-gradient(rgba(240, 247, 238, 0.45), rgba(240, 207, 101, 0.45)), url(hero-about-2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left top;
