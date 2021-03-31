@@ -188,14 +188,13 @@ width: 100%;
 }
 
 .cardstyling {
-  height: auto;
-  background-color: white;
+  max-height: 50vh;
+  background-color: $lightwhite;
   box-shadow: 2px 2px 10px lightgrey;
   border-radius: 3px;
   padding: 1.5em;
   font-size: 0.8em;
   font-weight: 600;
-
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -554,7 +553,7 @@ section {
           rgba(240, 207, 101, 0.45)
         ),
         /* your image */
-        url(../assets/hero-about-2.jpg);
+        url(hero-about-2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left top;
@@ -878,36 +877,36 @@ section.home-homestay {
     margin-left: auto;
     margin-right: auto;
 
-    &-grid {
-      display: grid;
-      grid-template-columns: auto auto auto auto auto;
-      align-items: center;
-      grid-template-rows: auto;
-      grid-column-gap: 1.5em;
-      justify-content: space-between;
-      grid-template-areas: "card arrow card2 arrow2 card3";
+      @include for-tablet-portrait-up {
+      & .slider, .bx-wrapper {
+        display: none;
+        }
+      &-grid {
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        align-items: center;
+        grid-template-rows: auto;
+        grid-column-gap: 1.5em;
+        justify-content: space-between;
+        grid-template-areas: "card arrow card2 arrow2 card3";
 
-           @include for-phone-only {
-             grid-template-columns: 1fr;
-             grid-template-rows: auto auto auto auto;
-             grid-gap: 0.2em;
-             grid-template-areas: "card"
-                                  "arrow"
-                                  "card2"
-                                  "arrow2"
-                                  "card3";
-             }
-       & img, p, h4 {
-           margin: 0;
-       }
-       & .sectioncontent {
-         padding: 2em;
-         padding-left: 0.5em;
-       }
-    }
+         & img, p, h4 {
+             margin: 0;
+         }
+
+         & .sectioncontent {
+           padding: 2em;
+           padding-left: 0.5em;
+            }
+          } /*end grid */
+        } /*end tablet*/
+      } /*end schedule process*/
+
+.schedule-process-grid {
+  @include for-phone-only {
+    display: none;
   }
-
-
+}
 
 
 

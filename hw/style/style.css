@@ -195,8 +195,8 @@ a {
     grid-area: card3; }
 
 .cardstyling {
-  height: auto;
-  background-color: white;
+  max-height: 50vh;
+  background-color: #f4f7f3;
   box-shadow: 2px 2px 10px lightgrey;
   border-radius: 3px;
   padding: 1.5em;
@@ -714,26 +714,31 @@ section.home-homestay {
   justify: center;
   max-width: 800px;
   margin-left: auto;
-  margin-right: auto; }
-  .schedule-process-grid {
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
-    align-items: center;
-    grid-template-rows: auto;
-    grid-column-gap: 1.5em;
-    justify-content: space-between;
-    grid-template-areas: "card arrow card2 arrow2 card3"; }
-    @media (max-width: 599px) {
+  margin-right: auto;
+  /*end tablet*/ }
+  @media (min-width: 600px) {
+    .schedule-process {
+      /*end grid */ }
+      .schedule-process .slider, .schedule-process .bx-wrapper {
+        display: none; }
       .schedule-process-grid {
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto auto;
-        grid-gap: 0.2em;
-        grid-template-areas: "card" "arrow" "card2" "arrow2" "card3"; } }
-    .schedule-process-grid img, .schedule-process-grid p, .schedule-process-grid h4 {
-      margin: 0; }
-    .schedule-process-grid .sectioncontent {
-      padding: 2em;
-      padding-left: 0.5em; }
+        display: grid;
+        grid-template-columns: auto auto auto auto auto;
+        align-items: center;
+        grid-template-rows: auto;
+        grid-column-gap: 1.5em;
+        justify-content: space-between;
+        grid-template-areas: "card arrow card2 arrow2 card3"; }
+        .schedule-process-grid img, .schedule-process-grid p, .schedule-process-grid h4 {
+          margin: 0; }
+        .schedule-process-grid .sectioncontent {
+          padding: 2em;
+          padding-left: 0.5em; } }
+
+/*end schedule process*/
+@media (max-width: 599px) {
+  .schedule-process-grid {
+    display: none; } }
 
 footer {
   position: relative;
