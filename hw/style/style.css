@@ -52,6 +52,70 @@ table {
   border-collapse: collapse;
   border-spacing: 0; }
 
+/*grid outline */
+.sectionheader {
+  position: relative;
+  grid-area: hd;
+  width: 100%; }
+
+.sectionsubheader {
+  position: relative;
+  grid-area: subhd;
+  width: 100%; }
+  .sectionsubheader2 {
+    grid-area: subhd2; }
+  .sectionsubheader3 {
+    grid-area: subhd3; }
+  .sectionsubheader4 {
+    grid-area: subhd4; }
+  .sectionsubheader5 {
+    grid-area: subhd5; }
+  .sectionsubheader6 {
+    grid-area: subhd6; }
+  .sectionsubheader7 {
+    grid-area: subhd7; }
+
+.sectioncontent {
+  position: relative;
+  grid-area: p; }
+  .sectioncontent2 {
+    grid-area: p2; }
+  .sectioncontent3 {
+    grid-area: p3; }
+  .sectioncontent4 {
+    grid-area: p4; }
+  .sectioncontent5 {
+    grid-area: p5; }
+  .sectioncontent6 {
+    grid-area: p6; }
+  .sectioncontent7 {
+    grid-area: p7; }
+
+.sectionphoto {
+  position: relative;
+  grid-area: img; }
+  .sectionphoto img {
+    position: relative; }
+  .sectionphoto2 {
+    grid-area: img2;
+    position: relative; }
+  .sectionphoto3 {
+    grid-area: img3;
+    position: relative; }
+  .sectionphoto4 {
+    grid-area: img4;
+    position: relative; }
+  .sectionphoto5 {
+    grid-area: img5;
+    position: relative; }
+
+.card {
+  grid-area: card; }
+  .card2 {
+    grid-area: card2; }
+  .card3 {
+    grid-area: card3; }
+
 html {
   color: #1F2C6B;
   background-color: #f0f7ee;
@@ -139,63 +203,6 @@ a {
     color: #f0f7ee; }
   a:focus {
     border: 1px solid #f0f7ee; }
-
-/*grid outline */
-.sectionheader {
-  position: relative;
-  grid-area: hd;
-  width: 100%; }
-
-.sectionsubheader {
-  position: relative;
-  grid-area: subhd;
-  width: 100%; }
-
-.sectionsubheader2 {
-  position: relative;
-  grid-area: subhd;
-  width: 100%; }
-
-.sectioncontent {
-  position: relative;
-  grid-area: p; }
-
-.sectioncontent2 {
-  position: relative;
-  grid-area: p2; }
-
-.sectioncontent3 {
-  position: relative;
-  grid-area: p3; }
-
-.sectioncontent4 {
-  position: relative;
-  grid-area: p4; }
-
-.sectionphoto {
-  position: relative;
-  grid-area: img; }
-  .sectionphoto img {
-    position: relative; }
-  .sectionphoto2 {
-    grid-area: img2;
-    position: relative; }
-  .sectionphoto3 {
-    grid-area: img3;
-    position: relative; }
-  .sectionphoto4 {
-    grid-area: img4;
-    position: relative; }
-  .sectionphoto5 {
-    grid-area: img5;
-    position: relative; }
-
-.card {
-  grid-area: card; }
-  .card2 {
-    grid-area: card2; }
-  .card3 {
-    grid-area: card3; }
 
 .cardstyling {
   max-height: 50vh;
@@ -787,7 +794,7 @@ section.home-homestay {
       grid-template-areas: "p" "img" "img2" "img3" "img4" "img5"; } }
 
 /* gallery visit day in the life */
-.schedule-gallery-visit3 {
+.schedule-visit3 {
   max-width: 700px;
   font-size: 0.9em;
   margin-left: auto;
@@ -796,22 +803,24 @@ section.home-homestay {
   grid-gap: 20px 20px;
   margin-top: 7.14286em;
   margin-bottom: 7.14286em;
-  grid-template-columns: auto 200px 1fr;
-  grid-template-rows: auto auto auto auto  auto auto auto auto;
+  width: 100%;
+  grid-template-columns: 1fr 4fr 5fr;
+  grid-template-rows: auto auto auto;
   /*7*/
+  grid-gap: 5em 3em;
   justify-content: space-between;
-  grid-template-areas: "hd" "time   img     p" "time2  img2    p2" "time3  img3    p3" "time4   img4   p4" "time5   img5   p5" "time6   img6   p6" "time7   img7   p7"; }
-  .schedule-gallery-visit3 img, .schedule-gallery-visit3 p, .schedule-gallery-visit3 h4 {
+  grid-template-areas: "hd hd hd" "subhd    img    p" "subhd2   img2   p2" "subhd3   img3   p3" "subhd4   img4   p4" "subhd5   img5   p5" "subhd6   img6   p6" "subhd7   img7   p7"; }
+  .schedule-visit3 img, .schedule-visit3 p, .schedule-visit3 h4 {
     margin: 0; }
-  .schedule-gallery-visit3 h4 {
+  .schedule-visit3 h4 {
     margin-bottom: 0.5em;
     font-weight: 600; }
-  .schedule-gallery-visit3 .sectioncontent {
+  .schedule-visit3 .sectioncontent {
     padding: 1em;
     justify-content: center;
     align-items: center; }
   @media (max-width: 599px) {
-    .schedule-gallery-visit3 {
+    .schedule-visit3 {
       grid-template-columns: 1fr;
       grid-template-rows: auto auto auto auto;
       grid-gap: 0.2em;

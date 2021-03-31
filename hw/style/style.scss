@@ -3,6 +3,7 @@
 @import "_variables";
 @import "sassy-gridlover";
 @import "_resets";
+@import "_grid";
 @import url('https://fonts.googleapis.com/css2?family=Kosugi+Maru&family=Noto+Sans+JP&family=Yusei+Magic&display=swap');
 
 @mixin sectionphoto-mobile() {
@@ -106,87 +107,6 @@ a {
 
   &:focus {
   border: 1px solid $white;
-  }
-}
-
-
-/*grid outline */
-.sectionheader {
-position: relative;
-grid-area: hd;
-width: 100%;
-}
-
-.sectionsubheader {
-position: relative;
-grid-area: subhd;
-width: 100%;
-}
-
-.sectionsubheader2 {
-position: relative;
-grid-area: subhd;
-width: 100%;
-}
-
-.sectioncontent {
-  position: relative;
-  grid-area: p;
-}
-
-.sectioncontent2 {
-  position: relative;
-  grid-area: p2;
-}
-
-.sectioncontent3 {
-  position: relative;
-  grid-area: p3;
-}
-
-.sectioncontent4 {
-  position: relative;
-  grid-area: p4;
-}
-
-.sectionphoto {
-  position: relative;
-  grid-area: img;
-
-  & img {
-    position: relative;
-
-  }
-
-  &2 {
-  grid-area: img2;
-  position: relative;
-  }
-
-  &3 {
-  grid-area: img3;
-  position: relative;
-  }
-
-  &4 {
-  grid-area: img4;
-  position: relative;
-  }
-
-  &5 {
-  grid-area: img5;
-  position: relative;
-  }
-}
-
-.card {
-  grid-area: card;
-
-  &2 {
-  grid-area: card2;
-  }
-  &3 {
-  grid-area: card3;
   }
 }
 
@@ -926,19 +846,21 @@ section.home-homestay {
         }
 
 /* gallery visit day in the life */
-      .schedule-gallery-visit3 {
+      .schedule-visit3 {
        @include gallery;
-       grid-template-columns: auto 200px 1fr;
-       grid-template-rows: auto auto auto auto  auto auto auto auto; /*7*/
+       width: 100%;
+       grid-template-columns: 1fr 4fr 5fr;
+       grid-template-rows: auto auto auto; /*7*/
+       grid-gap: 5em 3em;
        justify-content: space-between;
-       grid-template-areas: "hd"
-                            "time   img     p"
-                            "time2  img2    p2"
-                            "time3  img3    p3"
-                            "time4   img4   p4"
-                            "time5   img5   p5"
-                            "time6   img6   p6"
-                            "time7   img7   p7";
+       grid-template-areas: "hd hd hd"
+                            "subhd    img    p"
+                            "subhd2   img2   p2"
+                            "subhd3   img3   p3"
+                            "subhd4   img4   p4"
+                            "subhd5   img5   p5"
+                            "subhd6   img6   p6"
+                            "subhd7   img7   p7";
 
             @include for-phone-only {
               grid-template-columns: 1fr;
