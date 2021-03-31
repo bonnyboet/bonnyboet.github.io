@@ -205,7 +205,6 @@ a {
     border: 1px solid #f0f7ee; }
 
 .cardstyling {
-  max-height: 50vh;
   background-color: #f4f7f3;
   box-shadow: 2px 2px 10px lightgrey;
   border-radius: 3px;
@@ -411,8 +410,7 @@ section {
       margin-top: -2px;
       padding-top: 0px;
       padding-bottom: 0px;
-      height: auto;
-      background-blend-mode: color-burn; }
+      height: auto; }
       section.intro.about-intro p {
         max-width: 500px;
         font-size: 1.1em;
@@ -537,17 +535,17 @@ section.padding {
 
 /* mobile left colored border for navigation */
 @media (max-width: 599px) {
-  .home-intro, .schedule-intro {
-    border-left: 4px solid #374077;
+  .home-intro, .schedule-intake, .schedule-process, .schedule-visit-day {
+    border-left: 5px solid #f0cf65;
     margin-top: -3em; } }
 
 @media (max-width: 599px) {
   .home-homestay {
-    border-left: 4px solid #d7816a; } }
+    border-left: 5px solid #d7816a; } }
 
 @media (max-width: 599px) {
-  .home-sistercities {
-    border-left: 4px solid #f0cf65; } }
+  .home-sistercities, .schedule-visit {
+    border-left: 5px solid #374077; } }
 
 /* index.html sections */
 .home-intro, .home-homestay {
@@ -643,6 +641,10 @@ section.home-homestay {
       grid-gap: 0em;
       grid-template-areas: "hd" "p" "img" "p2"; } }
 
+@media (max-width: 599px) {
+  .schedule-intake-yellow {
+    background-color: #FBF3D8; } }
+
 /* galleries */
 .overlay {
   height: 100%;
@@ -689,6 +691,9 @@ section.home-homestay {
   grid-template-areas: "img p" "img2 img4" "img3 img4"; }
   .schedule-gallery-intake1 img, .schedule-gallery-intake1 p, .schedule-gallery-intake1 h4 {
     margin: 0; }
+  @media (max-width: 599px) {
+    .schedule-gallery-intake1img {
+      padding: 2em; } }
   .schedule-gallery-intake1 h4 {
     margin-bottom: 0.5em;
     font-weight: 600; }
@@ -696,6 +701,11 @@ section.home-homestay {
     padding: 1em;
     justify-content: center;
     align-items: center; }
+    @media (max-width: 599px) {
+      .schedule-gallery-intake1 .sectioncontent {
+        padding: 0.5em;
+        text-align: center;
+        padding-bottom: 1em; } }
   @media (max-width: 599px) {
     .schedule-gallery-intake1 {
       grid-template-columns: 1fr;
@@ -719,6 +729,9 @@ section.home-homestay {
   grid-template-areas: "img p" "img2 img3" "img2 img4"; }
   .schedule-gallery-intake2 img, .schedule-gallery-intake2 p, .schedule-gallery-intake2 h4 {
     margin: 0; }
+  @media (max-width: 599px) {
+    .schedule-gallery-intake2img {
+      padding: 2em; } }
   .schedule-gallery-intake2 h4 {
     margin-bottom: 0.5em;
     font-weight: 600; }
@@ -726,6 +739,11 @@ section.home-homestay {
     padding: 1em;
     justify-content: center;
     align-items: center; }
+    @media (max-width: 599px) {
+      .schedule-gallery-intake2 .sectioncontent {
+        padding: 0.5em;
+        text-align: center;
+        padding-bottom: 1em; } }
   @media (max-width: 599px) {
     .schedule-gallery-intake2 {
       grid-template-columns: 1fr;
@@ -749,6 +767,9 @@ section.home-homestay {
   grid-template-areas: "img p" "img img2" "img3 img4" "img5 img5"; }
   .schedule-gallery-visit1 img, .schedule-gallery-visit1 p, .schedule-gallery-visit1 h4 {
     margin: 0; }
+  @media (max-width: 599px) {
+    .schedule-gallery-visit1img {
+      padding: 2em; } }
   .schedule-gallery-visit1 h4 {
     margin-bottom: 0.5em;
     font-weight: 600; }
@@ -756,6 +777,11 @@ section.home-homestay {
     padding: 1em;
     justify-content: center;
     align-items: center; }
+    @media (max-width: 599px) {
+      .schedule-gallery-visit1 .sectioncontent {
+        padding: 0.5em;
+        text-align: center;
+        padding-bottom: 1em; } }
   @media (max-width: 599px) {
     .schedule-gallery-visit1 {
       grid-template-columns: 1fr;
@@ -779,6 +805,9 @@ section.home-homestay {
   grid-template-areas: "p img" "img2 img3" "img2 img4" "img5 img5"; }
   .schedule-gallery-visit2 img, .schedule-gallery-visit2 p, .schedule-gallery-visit2 h4 {
     margin: 0; }
+  @media (max-width: 599px) {
+    .schedule-gallery-visit2img {
+      padding: 2em; } }
   .schedule-gallery-visit2 h4 {
     margin-bottom: 0.5em;
     font-weight: 600; }
@@ -786,6 +815,11 @@ section.home-homestay {
     padding: 1em;
     justify-content: center;
     align-items: center; }
+    @media (max-width: 599px) {
+      .schedule-gallery-visit2 .sectioncontent {
+        padding: 0.5em;
+        text-align: center;
+        padding-bottom: 1em; } }
   @media (max-width: 599px) {
     .schedule-gallery-visit2 {
       grid-template-columns: 1fr;
@@ -804,7 +838,7 @@ section.home-homestay {
   margin-top: 7.14286em;
   margin-bottom: 7.14286em;
   width: 100%;
-  grid-template-columns: 1fr 4fr 5fr;
+  grid-template-columns: auto 4fr 5fr;
   grid-template-rows: auto auto auto;
   /*7*/
   grid-gap: 5em 3em;
@@ -812,6 +846,9 @@ section.home-homestay {
   grid-template-areas: "hd hd hd" "subhd    img    p" "subhd2   img2   p2" "subhd3   img3   p3" "subhd4   img4   p4" "subhd5   img5   p5" "subhd6   img6   p6" "subhd7   img7   p7"; }
   .schedule-visit3 img, .schedule-visit3 p, .schedule-visit3 h4 {
     margin: 0; }
+  @media (max-width: 599px) {
+    .schedule-visit3img {
+      padding: 2em; } }
   .schedule-visit3 h4 {
     margin-bottom: 0.5em;
     font-weight: 600; }
@@ -819,14 +856,19 @@ section.home-homestay {
     padding: 1em;
     justify-content: center;
     align-items: center; }
+    @media (max-width: 599px) {
+      .schedule-visit3 .sectioncontent {
+        padding: 0.5em;
+        text-align: center;
+        padding-bottom: 1em; } }
   @media (max-width: 599px) {
     .schedule-visit3 {
-      grid-template-columns: 1fr;
-      grid-template-rows: auto auto auto auto;
-      grid-gap: 0.2em;
-      grid-template-areas: "p" "img" "img2" "img3" "img4" "img5"; } }
+      display: none; } }
 
-.schedule-process {
+.schedule-visit3-mobile {
+  display: flex; }
+
+.schedule-process, .schedule-visit-day {
   box-shadow: none;
   text-align: center;
   justify: center;
@@ -835,11 +877,11 @@ section.home-homestay {
   margin-right: auto;
   /*end tablet*/ }
   @media (min-width: 600px) {
-    .schedule-process {
+    .schedule-process, .schedule-visit-day {
       /*end grid */ }
-      .schedule-process .slider, .schedule-process .bx-wrapper {
+      .schedule-process .slider, .schedule-process .bx-wrapper, .schedule-visit-day .slider, .schedule-visit-day .bx-wrapper {
         display: none; }
-      .schedule-process-grid {
+      .schedule-process-grid, .schedule-visit-day-grid {
         display: grid;
         grid-template-columns: auto auto auto auto auto;
         align-items: center;
@@ -847,7 +889,7 @@ section.home-homestay {
         grid-column-gap: 1.5em;
         justify-content: space-between;
         grid-template-areas: "card arrow card2 arrow2 card3"; }
-        .schedule-process-grid .sectioncontent {
+        .schedule-process-grid .sectioncontent, .schedule-visit-day-grid .sectioncontent {
           padding: 2em;
           padding-left: 0.5em; } }
 
