@@ -91,6 +91,9 @@ h4 {
   margin-top: 1.17648em;
   margin-bottom: 2.35295em; }
 
+h2, h3, h4 {
+  font-weight: 600; }
+
 p,
 ol,
 pre,
@@ -442,7 +445,7 @@ section {
     margin-top: 0;
     margin-bottom: 0;
     clip-path: polygon(0% 0%, 50% 17%, 100% 0%, 100% 83%, 50% 100%, 0px 83%);
-    background-image: linear-gradient(rgba(240, 247, 238, 0.45), rgba(240, 207, 101, 0.45)), url(../assets/hero-home2.jpg);
+    background-image: linear-gradient(rgba(240, 247, 238, 0.45), rgba(240, 207, 101, 0.45)), url(../assets/hero-home.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -475,9 +478,12 @@ section {
     background-image: linear-gradient(rgba(240, 247, 238, 0.45), rgba(240, 207, 101, 0.45)), url(hero-about-2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: left top;
+    background-position: center top;
     background-clip: border-box;
     box-shadow: none; }
+    @media (min-width: 900px) {
+      section.about-hero {
+        background-position: left top; } }
     section.about-hero img {
       margin: 0;
       width: 100vw;
@@ -630,6 +636,7 @@ section.home-homestay {
       grid-gap: 0em;
       grid-template-areas: "hd" "p" "img" "p2"; } }
 
+/* galleries */
 .overlay {
   height: 100%;
   width: 100%;
@@ -660,53 +667,155 @@ section.home-homestay {
     .overlay .label:hover {
       opacity: 1; }
 
+/* gallery intake programme */
 .schedule-gallery-intake1 {
-  max-width: 800px;
+  max-width: 700px;
   font-size: 0.9em;
   margin-left: auto;
   margin-right: auto;
   display: grid;
+  grid-gap: 20px 20px;
   margin-top: 7.14286em;
   margin-bottom: 7.14286em;
   grid-template-columns: 50% 50%;
   grid-template-rows: auto auto auto;
-  grid-gap: 30px 30px;
-  grid-template-areas: "p img" "img2 img4" "img3 img4"; }
+  grid-template-areas: "img p" "img2 img4" "img3 img4"; }
+  .schedule-gallery-intake1 img, .schedule-gallery-intake1 p, .schedule-gallery-intake1 h4 {
+    margin: 0; }
+  .schedule-gallery-intake1 h4 {
+    margin-bottom: 0.5em;
+    font-weight: 600; }
+  .schedule-gallery-intake1 .sectioncontent {
+    padding: 1em;
+    justify-content: center;
+    align-items: center; }
   @media (max-width: 599px) {
     .schedule-gallery-intake1 {
       grid-template-columns: 1fr;
       grid-template-rows: auto auto auto auto;
       grid-gap: 0.2em;
       grid-template-areas: "p" "img" "img2" "img3" "img4"; } }
-  .schedule-gallery-intake1 img, .schedule-gallery-intake1 p, .schedule-gallery-intake1 h4 {
-    margin: 0; }
-  .schedule-gallery-intake1 .sectioncontent {
-    padding: 2em;
-    padding-left: 0.5em; }
 
+/* gallery intake homestay */
 .schedule-gallery-intake2 {
-  max-width: 800px;
+  max-width: 700px;
   font-size: 0.9em;
   margin-left: auto;
   margin-right: auto;
   display: grid;
+  grid-gap: 20px 20px;
   margin-top: 7.14286em;
   margin-bottom: 7.14286em;
   grid-template-columns: 50% 50%;
   grid-template-rows: auto auto auto;
-  grid-gap: 30px 30px;
-  grid-template-areas: "img p" "img2 img3" "img2 img4";
-  justify-content: space-between; }
+  justify-content: space-between;
+  grid-template-areas: "img p" "img2 img3" "img2 img4"; }
+  .schedule-gallery-intake2 img, .schedule-gallery-intake2 p, .schedule-gallery-intake2 h4 {
+    margin: 0; }
+  .schedule-gallery-intake2 h4 {
+    margin-bottom: 0.5em;
+    font-weight: 600; }
+  .schedule-gallery-intake2 .sectioncontent {
+    padding: 1em;
+    justify-content: center;
+    align-items: center; }
   @media (max-width: 599px) {
     .schedule-gallery-intake2 {
       grid-template-columns: 1fr;
       grid-template-rows: auto auto auto auto;
       grid-gap: 0.2em;
       grid-template-areas: "p" "img" "img2" "img3" "img4"; } }
-  .schedule-gallery-intake2 img, .schedule-gallery-intake2 p, .schedule-gallery-intake2 h4 {
+
+/* gallery visit programme */
+.schedule-gallery-visit1 {
+  max-width: 700px;
+  font-size: 0.9em;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-gap: 20px 20px;
+  margin-top: 7.14286em;
+  margin-bottom: 7.14286em;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto auto;
+  justify-content: space-between;
+  grid-template-areas: "img p" "img img2" "img3 img4" "img5 img5"; }
+  .schedule-gallery-visit1 img, .schedule-gallery-visit1 p, .schedule-gallery-visit1 h4 {
     margin: 0; }
-  .schedule-gallery-intake2 .sectioncontent {
-    padding: 2em; }
+  .schedule-gallery-visit1 h4 {
+    margin-bottom: 0.5em;
+    font-weight: 600; }
+  .schedule-gallery-visit1 .sectioncontent {
+    padding: 1em;
+    justify-content: center;
+    align-items: center; }
+  @media (max-width: 599px) {
+    .schedule-gallery-visit1 {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto;
+      grid-gap: 0.2em;
+      grid-template-areas: "p" "img" "img2" "img3" "img4" "img5"; } }
+
+/* gallery visit homestay */
+.schedule-gallery-visit2 {
+  max-width: 700px;
+  font-size: 0.9em;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-gap: 20px 20px;
+  margin-top: 7.14286em;
+  margin-bottom: 7.14286em;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: auto auto auto;
+  justify-content: space-between;
+  grid-template-areas: "p img" "img2 img3" "img2 img4" "img5 img5"; }
+  .schedule-gallery-visit2 img, .schedule-gallery-visit2 p, .schedule-gallery-visit2 h4 {
+    margin: 0; }
+  .schedule-gallery-visit2 h4 {
+    margin-bottom: 0.5em;
+    font-weight: 600; }
+  .schedule-gallery-visit2 .sectioncontent {
+    padding: 1em;
+    justify-content: center;
+    align-items: center; }
+  @media (max-width: 599px) {
+    .schedule-gallery-visit2 {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto;
+      grid-gap: 0.2em;
+      grid-template-areas: "p" "img" "img2" "img3" "img4" "img5"; } }
+
+/* gallery visit day in the life */
+.schedule-gallery-visit3 {
+  max-width: 700px;
+  font-size: 0.9em;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-gap: 20px 20px;
+  margin-top: 7.14286em;
+  margin-bottom: 7.14286em;
+  grid-template-columns: auto 200px 1fr;
+  grid-template-rows: auto auto auto auto  auto auto auto auto;
+  /*7*/
+  justify-content: space-between;
+  grid-template-areas: "hd" "time   img     p" "time2  img2    p2" "time3  img3    p3" "time4   img4   p4" "time5   img5   p5" "time6   img6   p6" "time7   img7   p7"; }
+  .schedule-gallery-visit3 img, .schedule-gallery-visit3 p, .schedule-gallery-visit3 h4 {
+    margin: 0; }
+  .schedule-gallery-visit3 h4 {
+    margin-bottom: 0.5em;
+    font-weight: 600; }
+  .schedule-gallery-visit3 .sectioncontent {
+    padding: 1em;
+    justify-content: center;
+    align-items: center; }
+  @media (max-width: 599px) {
+    .schedule-gallery-visit3 {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto;
+      grid-gap: 0.2em;
+      grid-template-areas: "p" "img" "img2" "img3" "img4" "img5"; } }
 
 .schedule-process {
   box-shadow: none;
@@ -729,8 +838,6 @@ section.home-homestay {
         grid-column-gap: 1.5em;
         justify-content: space-between;
         grid-template-areas: "card arrow card2 arrow2 card3"; }
-        .schedule-process-grid img, .schedule-process-grid p, .schedule-process-grid h4 {
-          margin: 0; }
         .schedule-process-grid .sectioncontent {
           padding: 2em;
           padding-left: 0.5em; } }

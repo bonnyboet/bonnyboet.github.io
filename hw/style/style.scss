@@ -45,6 +45,9 @@ h4{
   @include sgl-heading(1, 0, 1, 2);
 }
 
+h2, h3, h4 {
+  font-weight: 600;
+}
 p,
 ol,
 pre,
@@ -508,7 +511,7 @@ section {
           rgba(240, 207, 101, 0.45)
         ),
         /* your image */
-        url(../assets/hero-home2.jpg);
+        url(../assets/hero-home.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -556,7 +559,10 @@ section {
         url(hero-about-2.jpg);
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: left top;
+    background-position: center top;
+    @include for-tablet-landscape-up {
+      background-position: left top;
+    }
     background-clip: border-box;
     box-shadow: none;
 
@@ -762,15 +768,33 @@ section.home-homestay {
 
    }
 
+
+/* galleries */
+
 @mixin gallery {
-  max-width: 800px;
+  max-width: 700px;
   font-size: 0.9em;
   margin-left: auto;
   margin-right: auto;
   display: grid;
+  grid-gap: 20px 20px;
+
+    & img, p, h4 {
+        margin: 0;
+    }
+
+    & h4 {
+      margin-bottom: 0.5em;
+      font-weight: 600;
+    }
+
+    & .sectioncontent {
+      padding: 1em;
+      justify-content: center;
+      align-items: center;
+    }
+
   @include sgl-margins(5, 5);
-
-
 }
 
 .overlay {
@@ -804,20 +828,18 @@ section.home-homestay {
     color: $white;
     opacity: 0;
 
-
     &:hover {
       opacity: 1;
     }
   }
 }
 
-
+/* gallery intake programme */
 .schedule-gallery-intake1 {
  @include gallery;
  grid-template-columns: 50% 50%;
  grid-template-rows: auto auto auto;
- grid-gap: 30px 30px;
- grid-template-areas: "p img"
+ grid-template-areas: "img p"
                       "img2 img4"
                       "img3 img4";
 
@@ -831,24 +853,17 @@ section.home-homestay {
                              "img3"
                              "img4";
         }
-  & img, p, h4 {
-      margin: 0;
-  }
-  & .sectioncontent {
-    padding: 2em;
-    padding-left: 0.5em;
-  }
   }
 
+/* gallery intake homestay */
   .schedule-gallery-intake2 {
-    @include gallery;
+   @include gallery;
    grid-template-columns: 50% 50%;
    grid-template-rows: auto auto auto;
-   grid-gap: 30px 30px;
+   justify-content: space-between;
    grid-template-areas: "img p"
                         "img2 img3"
                         "img2 img4";
-  justify-content: space-between;
 
         @include for-phone-only {
           grid-template-columns: 1fr;
@@ -859,15 +874,84 @@ section.home-homestay {
                                "img2"
                                "img3"
                                "img4";
-          }
-    & img, p, h4 {
-        margin: 0;
+      }
     }
 
-    & .sectioncontent {
-      padding: 2em;
-    }
-    }
+/* gallery visit programme */
+    .schedule-gallery-visit1 {
+     @include gallery;
+     grid-template-columns: 50% 50%;
+     grid-template-rows: auto auto auto;
+     justify-content: space-between;
+     grid-template-areas: "img p"
+                          "img img2"
+                          "img3 img4"
+                          "img5 img5";
+
+          @include for-phone-only {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto auto auto;
+            grid-gap: 0.2em;
+            grid-template-areas: "p"
+                                 "img"
+                                 "img2"
+                                 "img3"
+                                 "img4"
+                                 "img5";
+        }
+      }
+
+/* gallery visit homestay */
+      .schedule-gallery-visit2 {
+       @include gallery;
+       grid-template-columns: 50% 50%;
+       grid-template-rows: auto auto auto;
+       justify-content: space-between;
+       grid-template-areas: "p img"
+                            "img2 img3"
+                            "img2 img4"
+                            "img5 img5";
+
+            @include for-phone-only {
+              grid-template-columns: 1fr;
+              grid-template-rows: auto auto auto auto;
+              grid-gap: 0.2em;
+              grid-template-areas: "p"
+                                   "img"
+                                   "img2"
+                                   "img3"
+                                   "img4"
+                                   "img5";
+          }
+        }
+
+/* gallery visit day in the life */
+      .schedule-gallery-visit3 {
+       @include gallery;
+       grid-template-columns: auto 200px 1fr;
+       grid-template-rows: auto auto auto auto  auto auto auto auto; /*7*/
+       justify-content: space-between;
+       grid-template-areas: "hd"
+                            "time   img     p"
+                            "time2  img2    p2"
+                            "time3  img3    p3"
+                            "time4   img4   p4"
+                            "time5   img5   p5"
+                            "time6   img6   p6"
+                            "time7   img7   p7";
+
+            @include for-phone-only {
+              grid-template-columns: 1fr;
+              grid-template-rows: auto auto auto auto;
+              grid-gap: 0.2em;
+              grid-template-areas: "p"
+                                   "img"
+                                   "img2"
+                                   "img3"
+                                   "img4"
+                                   "img5";
+          }
+        }
 
   .schedule-process {
     box-shadow: none;
@@ -890,10 +974,6 @@ section.home-homestay {
         justify-content: space-between;
         grid-template-areas: "card arrow card2 arrow2 card3";
 
-         & img, p, h4 {
-             margin: 0;
-         }
-
          & .sectioncontent {
            padding: 2em;
            padding-left: 0.5em;
@@ -907,6 +987,10 @@ section.home-homestay {
     display: none;
   }
 }
+
+
+
+
 
 
 
