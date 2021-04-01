@@ -255,7 +255,7 @@ nav {
   @include for-desktop-up  {
     position: fixed;
     top: 100px;
-    right: -40px;
+    right: -50px;
     width: 180px;
     display: flex;
     flex-flow: column;
@@ -279,7 +279,6 @@ nav {
 
         &::before {
           content: url(../assets/arrow.svg);
-
           @include for-phone-only {
           content: url(../assets/arrow-mobile.svg);
           }
@@ -884,6 +883,7 @@ section.home-homestay {
       }
 
 
+/* sliders mobile */
   .schedule-process, .schedule-visit-day {
     box-shadow: none;
     text-align: center;
@@ -906,8 +906,9 @@ section.home-homestay {
         grid-template-areas: "card arrow card2 arrow2 card3";
 
          & .sectioncontent {
-           padding: 2em;
-           padding-left: 0.5em;
+             padding: 2em;
+             padding-left: 0.5em;
+             padding-bottom: 0em;
             }
           } /*end grid */
         } /*end tablet*/
@@ -919,9 +920,22 @@ section.home-homestay {
   }
 }
 
+section.schedule-visit-day-mobile {
+  @include for-tablet-portrait-up {
+    display: none;
+  };
+}
 
-
-
+.about-voices {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto auto auto;
+  grid-gap: 4em;
+  grid-template-areas: "hd hd"
+                        "p  bg"
+                        "bg2  p2"
+                        "bg3  p3";
+}
 
 
 
