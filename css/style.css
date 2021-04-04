@@ -24,6 +24,13 @@ article {
   margin-bottom: 7em;
 }
 
+.hero {
+  width: 100%;
+  padding-left: 1em;
+  padding-right: 1em;
+  margin: 0;
+}
+
 .background {
   height: auto;
   background-image: url("../img/project4.png");
@@ -83,9 +90,9 @@ nav.desktop {
 }
 
 nav ul {
+  padding: 0;
   margin-right: 1em;
   margin-left: 1em;
-  padding: 0;
 }
 
 nav ul li {
@@ -94,6 +101,7 @@ nav ul li {
   text-transform: uppercase;
   z-index: 1900;
   opacity: 0.8;
+
 }
 
 nav ul li:hover {
@@ -132,10 +140,6 @@ nav a:hover {
   align-items: center;
   padding-bottom: 1.8em;
   }
-
-.intro p {
-  margin-bottom: 0.9em;
-}
 
 .wave {
   position: inherit;
@@ -383,7 +387,7 @@ input:focus {
   position: sticky;
   top: 0px;
   width: 100%;
-  height: 4em;
+  height: 4.1em;
   z-index: 1300;
   background-color: #F4CF85;
   }
@@ -409,10 +413,7 @@ footer {
 }
 
 #hero-scrolldown {
-  height: 50px;
-}
-
-#hero-scrolldown:hover {
+  height: 40px;
   animation-name: scrolldown;
   animation-duration: 1s;
   animation-iteration-count: infinite;
@@ -537,11 +538,6 @@ footer {
           padding-right: 1em;
         }
 
-        .row.hero {
-          padding-left: 0em;
-          padding-right: 0em;
-        }
-
         form {
           display: flex;
           flex-direction: column;
@@ -566,7 +562,7 @@ footer {
         }
 
         #hero-scrolldown {
-          height: 50px;
+          height: 40px;
           animation-name: scrolldown;
           animation-duration: 2s;
           animation-iteration-count: infinite;

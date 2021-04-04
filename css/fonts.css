@@ -52,7 +52,7 @@ margin-top: 0.39em;
 margin-bottom: 0.4em;
 font-size: 4.052em;  /* 72.9pix */
 font-family: 'Cabin Sketch';
-letter-spacing: 15px;
+letter-spacing: 10px;
 line-height: 0.025;  /* 28.8 (spacing) x 3 is 86.4 is new line-height / 72.9 is 1,185 */
 font-weight: 800;
 }
@@ -60,7 +60,8 @@ font-weight: 800;
 p.topheader-paragraph {
   font-weight: 400;
   font-size: 15px;
-  max-width: 500px;
+  max-width: 520px;
+  padding: 1em;
 }
 
 h2 {font-size: 2.441em; /* 43.939px */
@@ -85,8 +86,8 @@ small, .text_small {font-size: 0.8em;}
 
 @media (max-width: 576px) {
 
-body {
-  font-size: 15px;
+html {
+  font-size: 14px;
 }
 
 
@@ -103,7 +104,6 @@ line-height: 0.025;  /* 28.8 (spacing) x 3 is 86.4 is new line-height / 72.9 is 
 
 h1.about {
   text-align: center;
-  font-size: 3.052em;
 }
 
 p {
@@ -111,7 +111,10 @@ p {
 }
 
 p.topheader-paragraph {
-  font-weight: 400;
+  font-weight: 300;
   font-size: 13px;
-  padding: 2em;
+  padding-top: 2em;
+  padding-bottom: 2em;
+  padding-right: 0em;
+}
 }
