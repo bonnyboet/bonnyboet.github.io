@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <title>Bonny Boet's Portfolio</title>
+
+  <!-- meta data -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"　shrink-to-fit="no">
+  <meta name="author" content="Bonny Boet">
+  <meta name="description" content="Front End Developer & Designer from the Netherlands based in Japan.">
+  <meta name="keyword" content="portfolio, javascript, developer, html, css, scss, japan, osaka, web, design, web developer, web designer">
+  <meta property="og:title" content="Bonny Boet's Portfolio"/>
+  <meta property="og:description" content="Front End Developer & Designer from the Netherlands based in Japan." />
+  <meta property="og:image" content=""/>
+  <meta property="og:url" content="https://bonnyboet.github.io/img/seo-bonnyboet.jpg" />
+  <meta property="og:type" content="website" />
+
+  <!-- favicon -->
+  <link rel="icon" type="image/svg+xml" href="svg/starfish.svg">
+
+  <!-- stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/fonts.css">
+
+
+  <!-- google fonts -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+
+  <!-- Jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script type="text/javascript" src="header.js"></script>
+  <script type="text/javascript" src="nav.js"></script>
+
+
+  <!-- icons -->
+  <script src="https://kit.fontawesome.com/80d339b1b8.js" crossorigin="anonymous"></script>
+
+</head>
+
+
+<body>
+<!-- <div id="baseline"></div> -->
+<!-- Start header -->
+<header>
+<!-- Top Navigation -->
+  <div class="nav-wrapper"> <!-- wrapper to enable flexbox-->
+    <nav class="desktop">    <!-- destkop nav only visible large screens -->
+      <div>     <!-- Language -->
+        <ul>
+          <li lang="ja"><a href="#about">日本語</a></li>
+        </ul>
+      </div>
+
+      <div>    <!-- central menu -->
+        <ul>
+          <li><a href="#about" aria-label="Jump to About">About</a></li>
+          <li><a href="#projects" aria-label="Jump to Projects">Projects</a></li>
+          <li><a href="#contact" aria-label="Jump to Contact info">Contact</a></li>
+        </ul>
+      </div>
+
+      <div>   <!-- Social media icons -->
+        <ul class="social-media">
+          <li><a href="https://www.linkedin.com/in/bonny-boet-7950b3147/" aria-label="Find me on Linkedin (external link)" target="_blank"><i class="fab fa-linkedin fa-lg"></i></a>
+          <li><a href="https://www.instagram.com/bonnyboet/" aria-label="Find me on instagram (external link)" target="_blank"><i class="fab fa-instagram-square fa-lg"></i></a>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="mobile-closed">
+    <span id="mobile-closed">MENU</span>
+    </div>
+
+    <nav class="mobile">    <!-- mobile nav only visible on phone -->
+
+          <ul>
+          <li><a href="#about" aria-label="Jump to About">About</a></li>
+          <li><a href="#projects" aria-label="Jump to Projects">Projects</a></li>
+          <li><a href="#contact" aria-label="Jump to Contact info">Contact</a></li>
+          <li lang="ja" id="switchlang-to-jp"><a href="#about">日本語</a></li>
+          <li id="mobile-opentoclose">✖</li>
+          </ul>
+
+    </nav>
+  </div>
+
+<!-- Welcome message -->
+  <div class="container-fluid">
+    <div class="row hero">
+      <div class="intro">
+              <h1 class="topheader">Bonny Boet</h1>
+
+              <p class="topheader-paragraph">Hi, my name is Bonny. I am an aspiring web designer <br class="mobile-hide">based in Japan. Please <strong>scroll down </strong>to take a dive into my portfolio.</p>
+
+              <a id="scrolldown" aria-label="Scroll down to main content" href="#about">
+                <svg id="hero-scrolldown" role="img" aria-label="Click to scroll down to main content" alt="Circle with downwards arrow." data-name="Component 1 – 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70">
+                <circle id="hero-scrolldown-ellipse" data-name="Ellipse 1" cx="31" cy="31" r="31" fill="#f4cf85"/>
+                <path id="Polygon_1" data-name="Polygon 1" d="M9,0l9,18H0Z" transform="translate(40 40) rotate(180)" fill="#fff"/>
+                </svg>
+              </a>
+
+       </div>
+     </div>
+  </div>
+
+  <!-- Wave animation -->
+  <div class="wave" alt="Animation of a wave" id="about">
+  </div>
+
+</header>
+
+
+<!-- Start main content -->
+<main>
+
+  <section class="about-info-wrapper">
+
+      <div class="container">
+
+        <div class="row about-info align-items-center">
+          <!-- left image -->
+          <div class="col-sm-6 border d-flex justify-content-center">
+          <img src="svg/about-picture.svg" id="about-picture" alt="Bonny Boet illustrated self-portrait">
+          </div>
+
+          <div class="col-sm-6 border">
+             <span class="about-header"><h1>About</h1></span>
+             <img src="img/1.jpg" id="about-picture-mobile" style="clip-path: circle(30%);">
+             <p>Hi! I am Bonny from the Netherlands now living in Nagasaki Japan.
+                For the past year, I have been studying how to design and code websites.
+                I made this portfolio to record and share my progress. </p>
+             <p>In my free time, I enjoy playing badminton, urban sketching, watercolours, and going for long walks.</p>
+          </div>
+        </div> <!-- end row -->
+    </div> <!-- end container-->
+</section>
+
+
+<!-- projects section -->
+<section id="projects" class="projects-wrapper">
+
+  <div class="container">
+
+    <div class="row projects-top align-items-center">
+
+      <!-- spacing left -->
+      <div class="col-sm-6 d-flex justify-content-center align-items-end">
+      </div>
+
+      <!-- Projects section title -->
+      <div class="col-sm-6">
+      <h1>Projects</h1>
+      </div>
+    </div>
+
+    <!-- project 1 -->
+    <article class="row projects">
+      <div class="col-sm-6 d-flex">
+        <span class="mobile-hide"></span>
+        <img src="img/seo-bonnyboet.jpg" alt="Screenshot of Project Portfolio">
+      </div>
+      <div class="col-sm-6">
+        <h3>Let's go on exchange</h3>
+        <p>I made this website to promote a local high school exchange programme to students and parents. </p>
+        <a class="projects-button" aria-label="See more of Exchange Programme homepage project" href="">see more</a>
+      </div>
+    </article>
+
+    <!-- project 2 -->
+    <article class="row projects">
+
+      <div class="col-sm-6 d-flex">
+        <span class="mobile-hide"></span>
+        <img src="img/seo-bonnyboet.jpg" alt="Screenshot of Project Portfolio" class="project-image">
+      </div>
+
+      <div class="col-sm-6">
+        <h3>Personal Portfolio</h3>
+        <p>A minimalist, pastel-color single page portfolio.</p>
+        <a class="projects-button" aria-label="See more of Humans of Hirado project (external link)" href="">See more</a>
+      </div>
+
+    </article>
+
+  </div> <!-- end container -->
+
+</section>  <!-- end projects section -->
+
+<!-- contact section -->
+<section id="contact" class="contact-wrapper">
+
+  <div class="container">
+
+    <!-- Projects section title -->
+    <div class="row contact-title">
+      <div class="col-sm-6">
+          <h1>Contact</h1>
+      </div>
+    </div>
+
+    <div class="row contact">
+      <div class="col-sm-6">
+      <h4>Thank you for visiting my portfolio. <br>Let's keep in touch!</h4>
+      </div>
+    </div>
+    <div class="row contact">
+      <div class="col-sm-6">
+        <h5>Find me on Social Media...</h5>
+        <p>If you'd like to follow my progress, I regularly update my Instagram. I will make an announcement whenever I addd something to my portfolio.</p>
+
+        <p><a class="contact-link" aria-label="Find me on Instagram (external link)" href="https://www.instagram.com/bonnyboet/" target="_blank"><i class="fab fa-linkedin fa-lg"></i> Instagram</a></p>
+        <p><a class="contact-link" aria-label="Find me on LinkedIn (external link)" href="https://www.linkedin.com/in/bonny-boet-7950b3147/" target="_blank"><i class="fab fa-instagram-square fa-lg"></i> LinkedIn</a></p>
+        <p><a class="contact-link" aria-label="Find me on Wantedly (external link)" href="https://www.wantedly.com/id/BonnyB/" target="_blank"><i class="fas fa-external-link-alt fa-lg"></i> Wantedly</a></p>
+
+      </div>
+
+      <div class="col-sm-6">
+
+        <h5>...or send me an e-mail!</h5>
+
+        <p>If you'd like to contact me directly, please send me an e-mail using the contact form below.</p>
+
+        <form action="https://formspree.io/f/xbjqragd" method="POST" id="survey-form">
+
+            <div class="form-group">
+              <label for="name" id="name-label" class="form-question">Name: </label>
+              <input type="text" id="name" name="name-label" placeholder="Name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="email" id="email-label" class="form-question">E-mail:</label>
+              <input type="email" id="email" name="email-label" placeholder="@" required>
+            </div>
+
+            <div class="form-group">
+              <label for="message" id="email-label" class="form-question">Message:</label>
+              <textarea id="message" name="message" placeholder="Message"></textarea>
+            </div>
+
+            <div class="form-group">
+              <button id="submit" onclick="sendEmail()" type="submit">Submit</button>
+            </div>
+
+        </form>
+
+      </div>
+    </div> <!-- end row -->
+  </div> <!-- end container -->
+</section>
+</main>
+
+<footer>
+<img src="svg/starfish.svg" id="starfish" alt="starfish illustration">2021 Bonny Boet @ www.bonnyboet.github.io
+</footer>
+
+</body>
+
+</html>

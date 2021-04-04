@@ -24,11 +24,11 @@
   <link rel="stylesheet" href="css/bootstrap-grid.css">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/fonts.css">
-
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- scroll animations -->
 
   <!-- google fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200;400;500;700;800&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
@@ -36,9 +36,10 @@
 
   <!-- Jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <script type="text/javascript" src="header.js"></script>
-  <script type="text/javascript" src="nav.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="header.js">
 
+  </script>
 
   <!-- icons -->
   <script src="https://kit.fontawesome.com/80d339b1b8.js" crossorigin="anonymous"></script>
@@ -52,10 +53,12 @@
 <header>
 <!-- Top Navigation -->
   <div class="nav-wrapper"> <!-- wrapper to enable flexbox-->
+  </div>
+
     <nav class="desktop">    <!-- destkop nav only visible large screens -->
       <div>     <!-- Language -->
         <ul>
-          <li lang="ja"><a href="#about">日本語</a></li>
+          <li lang="ja"><a href="#about"><i class="fas fa-language"></i></a></li>
         </ul>
       </div>
 
@@ -73,7 +76,9 @@
           <li><a href="https://www.instagram.com/bonnyboet/" aria-label="Find me on instagram (external link)" target="_blank"><i class="fab fa-instagram-square fa-lg"></i></a>
         </ul>
       </div>
+
     </nav>
+
 
     <div class="mobile-closed">
     <span id="mobile-closed">MENU</span>
@@ -98,7 +103,7 @@
       <div class="intro">
               <h1 class="topheader">Bonny Boet</h1>
 
-              <p class="topheader-paragraph">Hi, my name is Bonny. I am an aspiring web designer <br class="mobile-hide">based in Japan. Please <strong>scroll down </strong>to take a dive into my portfolio.</p>
+              <p class="topheader-paragraph">Welcome! Hi, my name is Bonny. I am an aspiring web designer <br class="mobile-hide">based in Japan. Please <strong>scroll down </strong>to take a dive into my portfolio.</p>
 
               <a id="scrolldown" aria-label="Scroll down to main content" href="#about">
                 <svg id="hero-scrolldown" role="img" aria-label="Click to scroll down to main content" alt="Circle with downwards arrow." data-name="Component 1 – 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70">
@@ -118,22 +123,27 @@
 </header>
 
 
+
+
 <!-- Start main content -->
 <main>
 
-  <section class="about-info-wrapper">
+<div class="nav-bg-blue"></div>
+
+  <section class="about-info-wrapper d-flex justify-content-around">
 
       <div class="container">
 
-        <div class="row about-info align-items-center">
+        <div class="row about-info d-flex  align-items-center">
           <!-- left image -->
-          <div class="col-sm-6 border d-flex justify-content-center">
-          <img src="svg/about-picture.svg" id="about-picture" alt="Bonny Boet illustrated self-portrait">
+          <div class="col-sm-6 border d-flex justify-content-center" data-aos="fade-right" data-aos-duration="1500">
+          <img src="img/intro.jpg" id="about-picture" alt="Bonny Boet illustrated self-portrait">
           </div>
 
-          <div class="col-sm-6 border">
-             <span class="about-header"><h1>About</h1></span>
-             <img src="img/1.jpg" id="about-picture-mobile" style="clip-path: circle(30%);">
+          <div class="col-sm-6 border" data-aos="fade-up" data-aos-duration="1000">
+             <span><h1>About</h1></span>
+             <h3>Nice to meet you!</h3>
+             <img src="img/intro.jpg" id="about-picture-mobile">
              <p>Hi! I am Bonny from the Netherlands now living in Nagasaki Japan.
                 For the past year, I have been studying how to design and code websites.
                 I made this portfolio to record and share my progress. </p>
@@ -141,92 +151,87 @@
           </div>
         </div> <!-- end row -->
     </div> <!-- end container-->
+
 </section>
 
 
+<div class="nav-bg-grey"></div>
 <!-- projects section -->
+
 <section id="projects" class="projects-wrapper">
 
   <div class="container">
 
     <div class="row projects-top align-items-center">
 
-      <!-- spacing left -->
-      <div class="col-sm-6 d-flex justify-content-center align-items-end">
-      </div>
-
       <!-- Projects section title -->
-      <div class="col-sm-6">
+      <div class="col-sm-6" data-aos="fade-right" data-aos-duration="1000">
       <h1>Projects</h1>
+      <h3>I challenge myself to learning a new skill with every project.</h3>
       </div>
     </div>
 
+    <!-- spacing right -->
+    <div class="col-sm-6 d-flex justify-content-around align-content-around">
+    </div>
+
     <!-- project 1 -->
-    <article class="row projects align-items-end">
-      <div class="col-sm-6 d-flex justify-content-center align-items-end">
-        <span class="mobile-hide"></span>
-      </div>
-      <div class="col-sm-6">
+    <article class="row projects">
+      <div class="col-sm-6 d-flex flex-column justify-content-start" data-aos="fade-right" data-aos-duration="1500">
         <h3>Let's go on exchange</h3>
-        <p>I made this website to promote a local high school exchange programme to students and parents. </p>
-        <a class="projects-button" aria-label="See more of Exchange Programme homepage project" href="">see more</a>
+        <p>I made this website to promote a local high school exchange programme to students and parents. For this project,
+          I used SCSS to compile the css styling. <br>
+        </p>
+        <p><a class="projects-button" aria-label="See more of Exchange Programme homepage project" href="">see more</a></p>
       </div>
+      <div class="col-sm-6 d-flex background2" data-aos="fade-up" data-aos-duration="2000">
+        <!-- <span class="mobile-hide"></span> -->
+     </div>
+
     </article>
 
     <!-- project 2 -->
     <article class="row projects">
-
-      <div class="col-sm-6 d-flex justify-content-center align-items-end">
-        <span class="mobile-hide"></span>
-      </div>
-
-      <div class="col-sm-6">
-        <h3>Discover Hirado</h3>
-        <p>A simple guide to Hirado for foreign visitors.
-        The articles are written by foreign residents in Hirado from Australia, USA, Canada, and China.
-        I used a minimalist design as to not distract from and to bring out the beauty of Hirado's natural treasures.</p>
-        <a class="projects-button" aria-label="See more of Sister Cities homepage project" href="">see more</a>
-      </div>
-
-    </article>
-
-    <!-- project 3 -->
-    <article class="row projects">
-
-      <div class="col-sm-6 d-flex justify-content-center align-items-end">
-        <span class="mobile-hide"></span>
-      </div>
-
-      <div class="col-sm-6">
+      <div class="col-sm-6 d-flex flex-column align-content-around justify-content-around" data-aos="fade-right" data-aos-duration="1500">
         <h3>Personal Portfolio</h3>
         <p>A minimalist, pastel-color single page portfolio.</p>
-        <a class="projects-button" aria-label="See more of Humans of Hirado project (external link)" href="">See more</a>
+
+        <p><a class="projects-button" aria-label="See more of Humans of Hirado project (external link)" href="">See more</a></p>
       </div>
 
+      <div class="col-sm-6 d-flex background" data-aos="fade-up" data-aos-duration="2000">
+      
+
+      </div>
     </article>
 
+    <span class="invisible">.</span>
   </div> <!-- end container -->
-
 </section>  <!-- end projects section -->
 
 <!-- contact section -->
+
+ <div class="nav-bg-yellow"> </div>
+
 <section id="contact" class="contact-wrapper">
+
 
   <div class="container">
 
+
     <!-- Projects section title -->
-    <div class="row contact-title">
+    <div class="row contact-title" data-aos="fade-right" data-aos-duration="1500">
       <div class="col-sm-6">
           <h1>Contact</h1>
       </div>
     </div>
 
-    <div class="row contact">
+    <div class="row contact" data-aos="fade-right" data-aos-duration="1500">
       <div class="col-sm-6">
       <h4>Thank you for visiting my portfolio. <br>Let's keep in touch!</h4>
       </div>
     </div>
-    <div class="row contact">
+    <div class="row contact" data-aos="fade-up" data-aos-duration="500">
       <div class="col-sm-6">
         <h5>Find me on Social Media...</h5>
         <p>If you'd like to follow my progress, I regularly update my Instagram. I will make an announcement whenever I addd something to my portfolio.</p>
@@ -237,7 +242,7 @@
 
       </div>
 
-      <div class="col-sm-6">
+      <div class="col-sm-6" data-aos="fade-up" data-aos-duration="1500">
 
         <h5>...or send me an e-mail!</h5>
 
@@ -275,6 +280,10 @@
 <footer>
 <img src="svg/starfish.svg" id="starfish" alt="starfish illustration">2021 Bonny Boet @ www.bonnyboet.github.io
 </footer>
+
+<script>
+  AOS.init();
+</script>
 
 </body>
 
