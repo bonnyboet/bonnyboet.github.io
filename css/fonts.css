@@ -21,6 +21,7 @@ p {
   margin-bottom: 1.6em;
   line-height: 1.6;
   letter-spacing: 0.4px;
+  padding-right: 3em;
 }
 
 h1  {
@@ -44,7 +45,6 @@ h1 {
   margin-bottom: 0.52em;
   font-size: 3.052em;
   line-height: 1.0484;
-
 }
 
 h1.topheader {
@@ -89,17 +89,29 @@ body {
   font-size: 15px;
 }
 
+
 h1.topheader {
 font-weight: 700;
 margin-top: 0.39em;
 margin-bottom: 0.3em;
-font-size: 3.052em;
+font-size: 40px;
 font-family: 'Cabin Sketch', cursive;
 letter-spacing: 2px;
 font-weight: 800;
 line-height: 0.025;  /* 28.8 (spacing) x 3 is 86.4 is new line-height / 72.9 is 1,185 */
 }
 
-h1 {
+h1.about {
   text-align: center;
+  font-size: 3.052em;
+}
+
+p {
+    padding-right: 0em;
+}
+
+p.topheader-paragraph {
+  font-weight: 400;
+  font-size: 13px;
+  padding: 2em;
 }
