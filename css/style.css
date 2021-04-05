@@ -500,6 +500,7 @@ footer {
           align-items: space-around;
           background-color: #FFFFFFEE;
           z-index: 500;
+          text-align: center;
         }
 
         nav.mobile ul {
