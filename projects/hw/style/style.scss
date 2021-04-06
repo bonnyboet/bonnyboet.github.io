@@ -46,7 +46,7 @@ h4{
   @include sgl-heading(1, 0, 1, 2);
 }
 
-h2, h3, h4 {
+h2, h3, h4, h5 {
   font-weight: 600;
 }
 p,
@@ -110,6 +110,9 @@ a {
   }
 }
 
+.bx-wrapper {
+  background-color: $white;
+}
 .cardstyling {
   background-color: $lightwhite;
   box-shadow: 2px 2px 10px lightgrey;
@@ -140,6 +143,7 @@ a {
 nav {
   position: fixed;
   top: 0px;
+
   width: 100%;
   z-index: 1600;
   height: auto;
@@ -151,31 +155,36 @@ nav {
   &.nav-destkop {
     @include for-phone-only {
       display: none;
+      height: 100%;
     }
 
   & ul {
      margin-bottom: 1em;
-     padding: 1.5em 1.5em 1.5em 2.5em;   /* 30px 10px 5px 5px */
+     padding: 2em 1.5em 2em 2.5em;   /* 30px 10px 5px 5px */
      display: flex;
      flex-direction: row;
      justify-content: center;
 
-     & a {
+     & li {
        margin-left: 2em;
        margin-right: 2em;
+     }
+
+     & a {
        color: $white;
        padding: 10px;
        text-decoration: none;
-       border-bottom: 0.3em solid $white;
+       border-bottom: 0.5em solid $white;
+       font-weight: 100;
 
        &:hover {
          color: $orange;
-         border-bottom: 0.3em solid $orange;
+         border-bottom: 0.5em solid $orange;
        }
 
        &:active {
          color: $orange;
-         border-bottom: 0.3em solid $orange;
+         border-bottom: 0.5em solid $orange;
        }
 
        &:visited {
@@ -695,14 +704,14 @@ section.home-homestay {
 /* galleries */
 
 @mixin gallery {
-  max-width: 700px;
+  max-width: 750px;
   font-size: 0.9em;
   margin-left: auto;
   margin-right: auto;
   display: grid;
   grid-gap: 20px 20px;
 
-    & img, p, h4 {
+    & img, p, h4, h3 {
         margin: 0;
     }
 
@@ -734,12 +743,10 @@ section.home-homestay {
   top: 0;
   left: 0;
   position: absolute;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: $orange;
+  background-color: $blue;
   transition: 0.5s ease;
   opacity: 0;
+
 
   &:hover {
     opacity: 90%;
@@ -753,12 +760,16 @@ section.home-homestay {
     left: 0;
     position: absolute;
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    font-weight: 600;
     color: $white;
     opacity: 0;
 
+    & h5 {
+      font-weight: 200;
+      padding: 3em;
+    }
     &:hover {
       opacity: 1;
     }
@@ -770,7 +781,8 @@ section.home-homestay {
  @include gallery;
  grid-template-columns: 50% 50%;
  grid-template-rows: auto auto auto;
- grid-template-areas: "img p"
+ grid-template-areas:
+                      "img p"
                       "img2 img4"
                       "img3 img4";
 
@@ -863,6 +875,7 @@ section.home-homestay {
        grid-template-columns: auto 4fr 5fr;
        grid-template-rows: auto auto auto; /*7*/
        grid-gap: 5em 3em;
+       align-items: center;
        justify-content: space-between;
        grid-template-areas: "hd hd hd"
                             "subhd    img    p"
@@ -873,10 +886,18 @@ section.home-homestay {
                             "subhd6   img6   p6"
                             "subhd7   img7   p7";
 
-            @include for-phone-only {
+            @include for-tablet-portrait-up {
+            & img {
+              box-shadow: 10px 10px 20px lightgrey;
+              border-radius: 10px;
+              border-top: 4px solid $blue;
+              border-bottom: 4px solid $blue;
+            }
+            }
+              @include for-phone-only {
               display: none;
-          }
-        }
+            }
+      }
 
       .schedule-visit3-mobile {
         display: flex;
@@ -884,7 +905,7 @@ section.home-homestay {
 
 
 /* sliders mobile */
-  .schedule-process, .schedule-visit-day {
+  .schedule-process, .schedule-visit-day,  {
     box-shadow: none;
     text-align: center;
     justify: center;
@@ -917,6 +938,12 @@ section.home-homestay {
 .schedule-process-grid {
   @include for-phone-only {
     display: none;
+  }
+}
+
+.schedule-process {
+  & p {
+    margin-bottom: 4em;
   }
 }
 
@@ -971,6 +998,10 @@ footer {
                       "p2"
                       "p3";
   margin-top: -12em;
+
+  &#footer-schedule {
+    margin-top: -2em;
+  }
   }
 }
 

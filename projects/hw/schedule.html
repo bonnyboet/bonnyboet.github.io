@@ -20,17 +20,17 @@
 
   <!-- stylesheets -->
   <link rel="stylesheet" href="style/style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- AOS library animations CSS -->
 
   <!-- google fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Yusei+Magic&display=swap" rel="stylesheet"> <!-- font-family: 'Yusei Magic', sans-serif; -->
   <link rel="stylesheet" href="http://mplus-webfonts.sourceforge.jp/mplus_webfonts.css">     <!-- link to css list http://mplus-webfonts.osdn.jp -->
   <script src="https://kit.fontawesome.com/80d339b1b8.js" crossorigin="anonymous"></script>
-  <script type="text/javascript" src="js/menu.js"></script>
-  <script src="https://kit.fontawesome.com/80d339b1b8.js" crossorigin="anonymous"></script>
 
   <!-- Jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script> <!-- AOS library animations JS -->
   <script type="text/javascript" src="js/menu.js"></script>
   <script type="text/javascript" src="js/nav.js"></script>
 
@@ -52,8 +52,7 @@
   <nav class="nav-destkop" id="nav-destkop">
     <ul>
       <li><a href="index.html">HOME</a></li>
-      <li><a href="index.html" class="navactive">留学の流れ</a></li>
-      <li><a href="index.html">参加者の声</a></li>
+      <li><a href="index.html">留学の流れ</a></li>
       <li><a href="index.html">保護者へ</a></li>
       <li><a href="index.html">申し込み</a></li>
     </ul>
@@ -81,7 +80,6 @@
   <div class="sidenav">
   <a href="#schedule-intro"> 受け入れ</a>
   <a href="#schedule-visit"> オランダ訪問</a>
-  <a href="#about-voices"> 参加者の声</a>
   <a href="#top"> TOP</a>
   </div>
 
@@ -110,7 +108,7 @@
   <!-- 1 Introduction section -->
   <section class="schedule-intake padding" id="schedule-intro">
 
-    <article class="schedule-intake-intro">
+    <article class="schedule-intake-intro" data-aos="fade-up" data-aos-duration="1000">
     <h2 class="sectionheader">Part I - 受け入れ</h2>
 
     <div class="sectioncontent">
@@ -131,7 +129,7 @@
     </article>
 
 
-    <article class="schedule-gallery-intake1">
+    <article class="schedule-gallery-intake1" data-aos="fade-up" data-aos-duration="1000">
       <div class="sectioncontent">
         <h4>受け入れの教育Ｘ文化体験</h4>
         <p>
@@ -142,34 +140,35 @@
       <div class="sectionphoto">
         <img src="images/about-intake-1.jpg">
         <div class="overlay">
-          <div class="label"><h2>ホームステイ</h2></div>
+          <div class="label"><h5>着物体験</h5></div>
         </div>
       </div>
 
       <div class="sectionphoto2">
         <img src="images/about-intake-2.jpg" class="sectionphoto2">
         <div class="overlay">
-          <div class="label"><h2>ホームステイ</h2></div>
+          <div class="label"><h5>ひらどならでは相撲！</h5></div>
         </div>
       </div>
 
       <div class="sectionphoto3">
         <img src="images/about-intake-3.jpg" class="sectionphoto3">
         <div class="overlay">
-          <div class="label"><h2>ホームステイ</h2></div>
+          <div class="label"><h5>箏を引いてみよう！</h5></div>
         </div>
       </div>
 
       <div class="sectionphoto4">
         <img src="images/about-intake-4.jpg" class="sectionphoto4">
         <div class="overlay">
-          <div class="label"><h2>ホームステイ</h2></div>
+          <div class="label"><h5>平戸に住んでいながらも、今まで経験したことがない事をたくさん体験できたし、新たな平戸を知ることができました。
+            <br><br>小濵　智也</h5></div>
         </div>
       </div>
 
     </article>
 
-    <article class="schedule-gallery-intake2">
+    <article class="schedule-gallery-intake2"  data-aos="fade-up" data-aos-duration="1000">
 
       <div class="sectioncontent">
         <h4>ホームステイ</h4>
@@ -181,28 +180,45 @@
       <div class="sectionphoto">
         <img src="images/about-intake-5.jpg">
         <div class="overlay">
-          <div class="label"><h2>ホームステイ</h2></div>
+          <div class="label">
+            <h5>「日本の小さな
+            “いなか町“に住んでいるだけでは到底味わえない世界を、娘と一緒に体感させていただいたと、改めて実感しています。
+            」<br><br>
+            森　結乃　父
+          </h5></div>
+
         </div>
       </div>
 
       <div class="sectionphoto2">
         <img src="images/about-intake-6.jpg" class="sectionphoto2">
         <div class="overlay">
-          <div class="label"><h2>ホームステイ</h2></div>
+          <div class="label"><h5>言葉の壁は思っていた以上に高く、伝えられないもどかしさもありましたが、
+            参加した息子と高３、中２の娘とジェスチャー、絵、スマホアプリを使いながら何とかなりました。
+            英語力の向上だけではなく、家族全員が少し変わったような気がします。
+            <br><br>
+          佐々木　慶士　母</h5>
+          </div>
         </div>
       </div>
 
       <div class="sectionphoto3">
         <img src="images/about-intake-7.jpg" class="sectionphoto3">
         <div class="overlay">
-          <div class="label"><h2>ホームステイ</h2></div>
+          <div class="label"><h5>うちは共働きでしたが、他の家庭に協力してもらい受入れすることができました。保護者の皆様と知り合いになれてよかったです。
+            今後、交流に参加する家庭の方も心配せずに参加してほしいです。 (田中　李空　母)
+          </h5></div>
         </div>
       </div>
 
       <div class="sectionphoto4">
         <img src="images/about-intake-8.jpg" class="sectionphoto4">
         <div class="overlay">
-          <div class="label"><div><h2>ホームステイ</h2>
+          <div class="label"><div><h5>今でも息子が一人増えたような思いです。
+          <br><br>
+          木寺　祐槻　母
+
+          </h5>
         </div>
       </div>
 
@@ -214,7 +230,7 @@
 
 
 
-  <section class="schedule-process padding">
+  <section class="schedule-process padding"  data-aos="fade-up" data-aos-duration="1000">
     <h4>受け入れまでの流れ</h4>
     <p>オランダ人が来日する前に、平戸の参加者とオランダ人の「ペア」が発表されます。学校の先生などと相談しながら、それぞれの趣味、興味、性格を考慮してマッチングします。
     </p>
@@ -235,7 +251,7 @@
     </div>
 
     <div class="schedule-process-grid">
-      <div class="card cardstyling">
+      <div class="card cardstyling" data-aos="flip-left" data-aos-duration="500"  data-aos-delay="300">
         <img src="assets/schedule-process-connect.jpg">
         <p>8月：マッチングの発表</p>
       </div>
@@ -244,7 +260,7 @@
         <img src="svg/arrow-orange.svg" alt="">
       </div>
 
-      <div class="card2 cardstyling">
+      <div class="card2 cardstyling" data-aos="flip-left" data-aos-duration="2000"  data-aos-delay="300">
         <img src="assets/schedule-process-matching.jpg">
         <p>ＳＮＳ交換</p>
       </div>
@@ -253,7 +269,7 @@
         <img src="svg/arrow-orange.svg" alt="">
       </div>
 
-      <div class="card3 cardstyling">
+      <div class="card3 cardstyling" data-aos="flip-left" data-aos-duration="3000"  data-aos-delay="300">
         <img src="assets/schedule-process-meet.jpg">
         <p>10月：平戸市役所で対面</p>
       </div>
@@ -266,7 +282,7 @@
   <section class="schedule-visit padding" id="schedule-visit">
 
     <!-- visit introduction par -->
-    <article class="schedule-intake-intro">
+    <article class="schedule-intake-intro" data-aos="fade-up" data-aos-duration="1000">
     <h2 class="sectionheader">Part II - オランダ訪問</h2>
 
     <div class="sectioncontent">
@@ -286,9 +302,9 @@
     </article>
 
 
-    <article class="schedule-gallery-visit1">
+    <article class="schedule-gallery-visit1" data-aos="fade-up" data-aos-duration="1000">
       <div class="sectioncontent">
-        <h4>学校プログラム・文化体験・観光</h4>
+        <h3>学校プログラム・文化体験・観光</h3>
         <p>あなたにとっての日常は、オランダ人が驚かされることがあります。家での生活が大きくかわることがあります。言葉の壁と文化の違いを実感するホームステイをすることで、自分と自分の毎日の生活に振り替えていろいろ考えさせられる機会です。
         </p>
       </div>
@@ -296,35 +312,36 @@
       <div class="sectionphoto">
         <img src="images/about-visit-1.jpg">
         <div class="overlay">
-          <div class="label"><h2>ホームステイ</h2></div>
+          <div class="label"><h5>色々なことをみんなで乗り越えて、お互いぶつかったりもしたけど全てがみんなの将来に絶対役にたつと思うし、大切なものになると思います。
+          この交流で将来の夢に向かって努力する決意ができました。
+          <br><br>
+          種岡　雅人
+          </h5></div>
         </div>
       </div>
 
       <div class="sectionphoto2">
         <img src="images/about-visit-2.jpg" class="sectionphoto2">
-        <div class="overlay">
-          <div class="label"><h2>ホームステイ</h2></div>
-        </div>
+
       </div>
 
       <div class="sectionphoto3">
         <img src="images/about-visit-3.jpg" class="sectionphoto3">
-        <div class="overlay">
-          <div class="label"><h2>ホームステイ</h2></div>
-        </div>
+
       </div>
 
       <div class="sectionphoto4">
         <img src="images/about-visit-4.jpg" class="sectionphoto4">
         <div class="overlay">
-          <div class="label"><h2>ホームステイ</h2></div>
+          <div class="label"><h5>世界的に有名なオランダのチューリップフィールド：家からチカ！</h5></div>
         </div>
       </div>
 
       <div class="sectionphoto5">
         <img src="images/about-visit-5.jpg" class="sectionphoto4">
         <div class="overlay">
-          <div class="label"><h2>ホームステイ</h2></div>
+          <div class="label"><h5>文化の違いや時間の価値観から戸惑うことが多く大変で、我慢することがあったけれど、思い切って自分の思いを伝えることができて自分自身が大きく成長したと思います。
+            <br><br>藤澤　あきほ</h5></div>
         </div>
       </div>
 
@@ -333,10 +350,10 @@
 
 
 
-    <article class="schedule-gallery-visit2">
+    <article class="schedule-gallery-visit2" data-aos="fade-up" data-aos-duration="1000">
 
       <div class="sectioncontent">
-        <h4>学校プログラム・文化体験・観光</h4>
+        <h3>学校プログラム・文化体験・観光</h3>
         <p>あなたにとっての日常は、オランダ人が驚かされることがあります。家での生活が大きくかわることがあります。言葉の壁と文化の違いを実感するホームステイをすることで、自分と自分の毎日の生活に振り替えていろいろ考えさせられる機会です。
         </p>
       </div>
@@ -344,35 +361,39 @@
       <div class="sectionphoto">
         <img src="images/about-visit-6.jpg">
         <div class="overlay">
-          <div class="label"><h2>ホームステイ</h2></div>
+          <div class="label">鍛造体験</div>
         </div>
       </div>
 
       <div class="sectionphoto2">
         <img src="images/about-visit-7.jpg" class="sectionphoto2">
         <div class="overlay">
-          <div class="label"><h2>ホームステイ</h2></div>
+          <div class="label"><h5>毎回起こる問題を解決しながら過ごしたので、交換留学が始まったばかりの頃と、終わる頃の私を比べてみたら、“誰が見ても別人“と思われるぐらい成長できたと
+          思います。
+          <br><br>
+          福田　加琳</h5>
+          </div>
         </div>
       </div>
 
       <div class="sectionphoto3">
         <img src="images/about-visit-8.jpg" class="sectionphoto3">
         <div class="overlay">
-          <div class="label"><h2>ホームステイ</h2></div>
+          <div class="label"><h5>オランダ風パンケーキ</h5></div>
         </div>
       </div>
 
       <div class="sectionphoto4">
         <img src="images/about-visit-9.jpg" class="sectionphoto4">
         <div class="overlay">
-          <div class="label"><h2>ホームステイ</h2></div>
+          <div class="label"><h5>始めてのアイススケート！</h5></div>
         </div>
       </div>
 
       <div class="sectionphoto5">
         <img src="images/about-visit-10.jpg" class="sectionphoto5">
         <div class="overlay">
-          <div class="label"><h2>ホームステイ</h2></div>
+          <div class="label"><h5>有名な観光地「フォーレンダム」でオランダの民族衣装体験</h5></div>
         </div>
       </div>
 
@@ -386,16 +407,16 @@
     <article class="schedule-visit3">
 
       <!-- sectionh topheader -->
-      <div class="sectionheader">
-        <h4>オランダ訪問の一日</h4>
+      <div class="sectionheader" data-aos="fade-up" data-aos-duration="1000">
+        <h3>オランダ訪問の一日</h3>
       </div>
 
 
       <!-- start day -->
-      <div class="sectionsubheader">   <!-- 7 am -->
-        <p>7:00 AM<br>
+      <div class="sectionsubheader" data-aos="fade-right">   <!-- 7 am -->
+        <h5>7:00 AM<br>
           朝ごはん
-        </p>
+        </h5>
       </div>
 
       <div class="sectionphoto">
@@ -403,191 +424,150 @@
       </div>
 
       <div class="sectioncontent">
-        <p>講ホ部到車ゆ服実保てねあ売壊ぐラらル米刊ラユヤ物供いよ巨散官無ケ悟志じドぼり増転イノ球携誠ヲ内意磨範霊ぜじゆ。
-        <p>
+        <p>オランダの朝ごはんは基本的にパン、ヨーグルト、シリアルを食べます。オランダの一般スーパーマーケットで
+          買えるハムやチーズは日本の百貨店レベルでとても美味しい！ <p>
       </div>
 
 
-      <div class="sectionsubheader2">   <!-- 8 am -->
-        <p>8:00 AM<br>
+      <div class="sectionsubheader2" data-aos="fade-right">   <!-- 8 am -->
+        <h5>8:00 AM<br>
           自転車で通学
-        </p>
+        </h5>
+
       </div>
       <div class="sectionphoto2">
         <img src="images/about-day-2.jpg">
       </div>
       <div class="sectioncontent2">
-        <p>講ホ部到車ゆ服実保てねあ売壊ぐラらル米刊ラユヤ物供いよ巨散官無ケ悟志じドぼり増転
+        <p>オランダの高校生は、毎日自転車で学校に通います。自転車に自身がなくても、ペアは優しく教えてくれるしあなたを待ってくれるから、安心してね！
         <p>
       </div>
 
-      <div class="sectionsubheader3">   <!-- 9 am -->
-        <p>9:00 AM<br>
+      <div class="sectionsubheader3" data-aos="fade-right">   <!-- 9 am -->
+        <h5>9:00 AM<br>
           体育
-        </p>
+        </h5>
       </div>
       <div class="sectionphoto3">
         <img src="images/about-day-3.jpg">
       </div>
       <div class="sectioncontent3">
-        <p>イノ球携誠ヲ内意磨範霊ぜじゆ。面りはみこ二不みせてル棋酷ヨソモク目2校。
+        <p>オランダの体育は男女一緒で楽しい！　訪問先のレーウエンホルスト高校の体育の先生たちは面白くて生徒に大人気！
         <p>
       </div>
 
-      <div class="sectionsubheader4">   <!-- 11 am -->
-        <p>11:00 AM<br>
+      <div class="sectionsubheader4" data-aos="fade-right">   <!-- 11 am -->
+        <h5>11:00 AM<br>
           カリグラフィー
-        </p>
+        </h5>
       </div>
       <div class="sectionphoto4">
         <img src="images/about-day-4.jpg">
       </div>
       <div class="sectioncontent4">
-        <p>面りはみこ二不みせてル棋酷ヨソモク目2校
+        <p>平戸の受け入れでは、日本の書道を体験し、最近日本でも人気がある「カリグラフィー（ハンドレタリング」をやってみよう！
         <p>
       </div>
 
-      <div class="sectionsubheader5">   <!-- 14 am -->
-        <p>14:00 PM<br>
+      <div class="sectionsubheader5" data-aos="fade-right">   <!-- 14 am -->
+        <h5>14:00 PM<br>
           クッキーづくり
-        </p>
+        </h5>
       </div>
       <div class="sectionphoto5">
         <img src="images/about-day-5.jpg">
       </div>
       <div class="sectioncontent5">
-        <p>講ホ部到車ゆ服実保てねあ売壊ぐよ巨散官無ケ悟志じドぼり増転。
-        <p>
+        <p>オランダと言えば、スイーツ！
+        </p>
       </div>
 
-      <div class="sectionsubheader6">   <!-- 17 am -->
-        <p>17:00 AM<br>
+      <div class="sectionsubheader6" data-aos="fade-right">   <!-- 17 am -->
+        <h5>17:00 AM<br>
           家族と晩御飯
-        </p>
+        </h5>
       </div>
       <div class="sectionphoto6">
         <img src="images/about-day-6.jpg">
       </div>
       <div class="sectioncontent6">
-        <p>球携誠ヲ内意磨範霊ぜじゆ。面りはみこ二不みせてル棋酷ヨソモク目2校
-        <p>
+        <p>オランダ人はワーク・ライフバランスを大切にし、家族の時間を優先的に保証します。
+          たいていの家族は、晩御飯を家族全員で食べます。家族のメンバーの一日に振り替えることが普通です。
+        </p>
       </div>
 
 
-      <div class="sectionsubheader7">   <!-- 19 pm -->
-        <p>19:00 PM<br>
+      <div class="sectionsubheader7" data-aos="fade-right">   <!-- 19 pm -->
+        <h5>19:00 PM<br>
           学校の<br>ダンスパーティ
-        </p>
+        </h5>
       </div>
       <div class="sectionphoto7">
         <img src="images/about-day-7.jpg">
       </div>
       <div class="sectioncontent7">
-        <p>講ホ部到車ゆ服実じゆ。面りはみこ二不みせてル棋酷ヨソモク目2校。
-        <p>
+        <p>日本の学校では体験できない、みんながワクワクするダンスパーティー！
+          会計料の授業に通う高校生が授業の課題として企画し、開催するダンスパーティーです。
+          開始時間は２０：００だけど、少なくとも30分遅れていくことが不問率。
+        </p>
       </div>
     </section> <!-- end day in the life -->
 
 <!-- MOBILE end day in the life -->
 
-    <section class="schedule-visit-day padding schedule-visit-day-mobile">
+    <section class="schedule-visit-day padding schedule-visit-day-mobile" data-aos="fade-up" data-aos-duration="1000">
       <!-- section topheader -->
-      <h4>オランダ訪問の一日</h4>
+      <h3>オランダ訪問の一日</h3>
       <div class="slider">
               <!-- start day -->
               <div class="card cardstyling">  <!-- 7 am -->
-                  <p>7:00 AM<br>朝ごはん</p>
+                  <h5>7:00 AM<br>朝ごはん</h5>
                   <img src="images/about-day-1-mobile.jpg">
               </div>
 
               <div class="card cardstyling">  <!-- 8 am -->
                <!-- 8 am -->
-                  <p>8:00 AM<br>自転車で通学</p>
+                  <h5>8:00 AM<br>自転車で通学</h5>
                   <img src="images/about-day-2-mobile.jpg">
               </div>
 
               <div class="card cardstyling"> <!-- 9 am -->
-                  <p>9:00 AM<br>体育</p>
+                  <h5>9:00 AM<br>体育</h5>
                   <img src="images/about-day-3-mobile.jpg">
               </div>
 
               <div class="card cardstyling">  <!-- 11 am -->
-                  <p>11:00 AM<br>カリグラフィー</p>
+                  <h5>11:00 AM<br>カリグラフィー</h5>
                   <img src="images/about-day-4-mobile.jpg">
               </div>
 
               <div class="card cardstyling">  <!-- 14 am -->
-                  <p>14:00 PM<br>クッキーづくり</p>
+                  <h5>14:00 PM<br>クッキーづくり</h5>
                   <img src="images/about-day-5-mobile.jpg">
               </div>
 
               <div class="card cardstyling">  <!-- 17 am -->
-                  <p>17:00 AM<br>家族と晩御飯</p>
-                  <img src="images/about-day-7-mobile.jpg">
+                  <h5>17:00 AM<br>家族と晩御飯</h5>
+                  <img src="images/about-day-6-mobile.jpg">
               </div>
 
               <div class="card cardstyling"> <!-- 19 pm -->
-                  <p>19:00 PM<br>学校のダンスパーティ</p>
+                  <h5>19:00 PM<br>学校のダンスパーティ</h5>
                   <img src="images/about-day-7-mobile.jpg">
               </div>
 
           </div> <!-- end slider -->
 
-    </article>  <!-- MOBILE end day in the life -->
-
 </section> <!-- end MOBILE section day in the life -->
-
-
-
-
-<section class="about-voices padding" id="about-voices">
-
-<h2 class="sectionheader">参加者の声</h2>
-<div class="sectioncontent">
-<p>「ヒルデを受け入れて、上手くいかないことも沢山あったけど最後は笑顔と涙でお別れできたので良かった。とてもいい経験ができた10日間でした。
-</p>
-<p>ヒルデの趣味はキックボクシングです。私の趣味は音楽を聴くこと。</p>
-<p>女の一番好きなのが、一緒にいて楽しいところ！」</p>
-</div>
-<div class="sectionbackground">
-</div>
-
-
-<div class="sectioncontent2">
-<p>「ヒルデを受け入れて、上手くいかないことも沢山あったけど最後は笑顔と涙でお別れできたので良かった。とてもいい経験ができた10日間でした。
-</p>
-<p>ヒルデの趣味はキックボクシングです。私の趣味は音楽を聴くこと。</p>
-<p>女の一番好きなのが、一緒にいて楽しいところ！」</p>
-</div>
-<div class="sectionbackground2">
-</div>
-
-<div class="sectioncontent3" id="about-voices-1">
-<p>「交流事業に応募した理由は、滅多に出来ない体験だし、将来絶対に役に立つ事を学べると思ったからです。
-</p>
-<p>私のパートナーの名前はイサです。友達と遊ぶことが好きです。彼女の一番好きな所は、とても優しいところです。例えば、言葉が通じるように優しく喋ってくれます。
-</p>
-<p>
-受け入れの前に、どういうものをパートナーは食べるのか、どんな文化の違いがあるのか、言葉は通じるのか、仲良くなれるかなど、いろいろ心配していました。
-</p>
-<p>
-実際に参加してみて、色々な文化の違いがわかり、すれ違いも少しあって大変だったけどたくさんの事が学べました。そして人それぞれ食べ物の好き嫌いがあり、好きなものはこれ、嫌いなものはこれ、など、１１日間一緒にいただけでパートナーの事がよく分かりました。パートナーともとても仲良くなれたし、最初言葉がよく分からなかったけど少しずつ分かってくるようになりました。とても大変でとても楽しくたくさんの事を学べた１１日間でした。」</p>
-</p>
-</div>
-<div class="sectionbackground3">
-</div>
-
-
-</section> <!-- end sankasha no koe -->
 
 </div><!-- end container -->
 
 
 
 <!-- FOOTER-->
-<footer>
+<footer id="footer-schedule">
 <div class="sectionheader">
-<h2>平戸姉妹都市<br>短期留学事業</h3>
+<h3>平戸姉妹都市<br>短期留学事業</h3>
   <p>
   <span class="footer-bold">文化観光商工部　文化交流課　交流推進班</span><br>
   電話：0950-22-9143 l FAX：0950-23-3399 <br>
@@ -600,7 +580,6 @@
 <a href="#">HOME</a><br>
 <a href="#">交換留学</a><br>
 <a href="#">受け入れと訪問のながれ</a><br>
-<a href="#">参加者の声</a>
 </p>
 </div>
 
@@ -627,6 +606,10 @@
 <p>2021 Bonny Boet @ <a href="www.bonnyboet.github.io">www.bonnyboet.github.io</a></p>
 </div>
 
+<!-- initialise AOS animatons -->
+<script>
+  AOS.init();
+</script>
 
   </body>
 
