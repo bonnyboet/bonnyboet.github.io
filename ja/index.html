@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="ja" dir="ltr">
 
 <head>
   <title>Bonny Boet's Portfolio</title>
@@ -20,10 +20,10 @@
   <link rel="icon" type="image/svg+xml" href="svg/starfish.svg">
 
   <!-- stylesheets -->
-  <link rel="stylesheet" href="css/bootstrap-reboot.css">
-  <link rel="stylesheet" href="css/bootstrap-grid.css">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/fonts.css">
+  <link rel="stylesheet" href="../css/bootstrap-reboot.css">
+  <link rel="stylesheet" href="../css/bootstrap-grid.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/fonts.css">
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> <!-- scroll animations -->
 
   <!-- google fonts -->
@@ -37,9 +37,10 @@
   <!-- Jquery -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script type="text/javascript" src="header.js"></script>
-  <script type="text/javascript" src="nav.js"></script>
+  <script type="text/javascript" src="../header.js"></script>
+  <script type="text/javascript" src="../nav.js"></script>
 
+  </script>
 
   <!-- icons -->
   <script src="https://kit.fontawesome.com/80d339b1b8.js" crossorigin="anonymous"></script>
@@ -58,7 +59,7 @@
     <nav class="desktop">    <!-- destkop nav only visible large screens -->
       <div>     <!-- Language -->
         <ul>
-          <li lang="ja"><a href="http://bonnyboet.github.io/ja/"><i class="fas fa-language fa-lg"></i></a></li>
+          <li lang="ja"><a href="http://bonnyboet.github.io/"><i class="fas fa-globe fa-lg"></i></a></li>
         </ul>
       </div>
 
@@ -102,7 +103,9 @@
     <div class="hero intro">
               <h1 class="topheader">BONNY BOET</h1>
 
-              <p class="topheader-paragraph">Welcome! Hi, my name is Bonny. I am an aspiring web designer <br class="mobile-hide">based in Japan. Please <strong>scroll down </strong>to take a dive into my portfolio.</p>
+              <p class="topheader-paragraph">
+                Webデザインとコーディングが大好きなオランダ女子です！<br>
+                <br class="mobile-hide"></p>
 
               <a id="scrolldown" aria-label="Scroll down to main content" href="#about">
                 <svg id="hero-scrolldown" role="img" aria-label="Click to scroll down to main content" alt="Circle with downwards arrow." data-name="Component 1 – 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70 70">
@@ -125,7 +128,7 @@
 <!-- Start main content -->
 <main>
 
-<div class="nav-bg-blue mobile-hide"></div>
+<div class="nav-bg-blue"></div>
 
   <section class="about-info-wrapper d-flex justify-content-around">
 
@@ -135,16 +138,17 @@
         <div class="row about-info d-flex  align-items-center">
           <!-- left image -->
           <div class="col-sm-6 border d-flex justify-content-center" data-aos="fade-right" data-aos-duration="1500">
-          <img src="img/intro.jpg" id="about-picture" alt="Bonny Boet illustrated self-portrait">
+          <img src="https://bonnyboet.github.io/img/intro.jpg" id="about-picture" alt="Bonny Boet illustrated self-portrait">
           </div>
 
           <div class="col-sm-6 border" data-aos="fade-up" data-aos-duration="1000">
              <h1 class="about">About</h1>
              <img src="img/intro.jpg" id="about-picture-mobile">
-             <p>Hi! I am Bonny from the Netherlands now living in Nagasaki Japan.
-                For the past year, I have been studying how to design and code websites.
-                I made this portfolio to record and share my progress. </p>
-             <p>In my free time, I enjoy playing badminton, urban sketching, watercolours, and going for long walks.</p>
+             <p>こんにちは！7年前にオランダから日本へ参りました、ボニーです。約一年前からウエブデザインとコーディングを勉強しています。</p>
+             <p>子供の頃から、絵を書いたり、モノづくりが大好きです。人々が「楽しかった！」と思えるような
+               インテルアクティブなウエブサイトを造れるようになりたいです。</p>
+              <p>ポートフォリオは、自分の成長をはかり、発信するために作製しました。ぜひとも、下記のプロジェクトをご覧になってください。</p>
+             </p>
           </div>
         </div> <!-- end row -->
     </div> <!-- end container-->
@@ -152,7 +156,7 @@
 </section>
 
 
-<div class="nav-bg-grey mobile-hide"></div>
+<div class="nav-bg-grey"></div>
 <!-- projects section -->
 
 <section id="projects" class="projects-wrapper">
@@ -164,7 +168,7 @@
       <!-- Projects section title -->
       <div class="col-sm-6" data-aos="fade-right" data-aos-duration="1000">
       <h1>Projects</h1>
-      <h3>I challenge myself to learning a new skill with every project.</h3>
+      <h3>各プロジェクトで、新しいスキルを身に着けるためにチャレンジします.</h3>
       </div>
     </div>
 
@@ -175,11 +179,11 @@
     <!-- project 1 -->
     <article class="row projects">
       <div class="col-sm-6 d-flex flex-column justify-content-start" data-aos="fade-up" data-aos-duration="1500">
-        <h3>Let's go on exchange</h3>
-        <p>I made this website to promote a local high school exchange programme to students and parents. For this project,
-          I used SCSS to compile the css styling. <br>
+        <h3>留学に行こう</h3>
+        <p>こちらのHPは、私は現在担当している平戸姉妹都市の高校生短期留学事業の参加者向けの募集PRサイトです。
+        今回は、CSS GridやSCSSを使ってみました。<br>
         </p>
-        <p><a class="projects-button" aria-label="See more of Exchange Programme homepage project" href="https://bonnyboet.github.io/projects/hw/" target="_blank">see more</a></p>
+          <p><a class="projects-button" aria-label="See more of Exchange Programme homepage project" href="https://bonnyboet.github.io/projects/hw/" target="_blank">see more</a></p>
       </div>
       <div class="col-sm-6 d-flex background2" data-aos="fade-up" data-aos-duration="2000">
         <!-- <span class="mobile-hide"></span> -->
@@ -190,8 +194,9 @@
     <!-- project 2 -->
     <article class="row projects">
       <div class="col-sm-6 d-flex flex-column align-content-around justify-content-around" data-aos="fade-up" data-aos-duration="1500">
-        <h3>Personal Portfolio</h3>
-        <p>A minimalist, pastel-color single page portfolio.</p>
+        <h3>ポートフォリオ</h3>
+        <p>こちらのページになりますが、落ち着いた色合いのシンプルなデザインにした私のポートフォリオです。<br>
+        SVGやCSSアニメーションにチャレンジしました。</p>
       </div>
 
       <div class="col-sm-6 d-flex background" data-aos="fade-up" data-aos-duration="2000">
@@ -206,7 +211,7 @@
 
 <!-- contact section -->
 
- <div class="nav-bg-yellow mobile-hide"> </div>
+ <div class="nav-bg-yellow"> </div>
 
 <section id="contact" class="contact-wrapper">
 
@@ -218,14 +223,14 @@
     <div class="row contact-title" data-aos="fade-right" data-aos-duration="1500">
       <div class="col-sm-6">
           <h1>Contact</h1>
-            <h4>Thank you for visiting my portfolio. <br>Let's keep in touch!</h4>
+            <h4>ポートフォリオをご覧いただき、<br>誠にありがとうございます</h4>
       </div>
     </div>
 
     <div class="row contact" data-aos="fade-up" data-aos-duration="1500">
       <div class="col-sm-6">
-        <h5>Find me on Social Media...</h5>
-        <p>If you'd like to follow my progress, I regularly update my Instagram. I will make an announcement whenever I add something to my portfolio.</p>
+        <h5>SNS</h5>
+        <p>こちらのポートフォリオに追加した際に、インスタグラムにも投稿致します。</p>
 
         <p><a class="contact-link" aria-label="Find me on Instagram (external link)" href="https://www.instagram.com/bonnyboet/" target="_blank"><i class="fab fa-linkedin fa-lg"></i> Instagram</a></p>
         <p><a class="contact-link" aria-label="Find me on LinkedIn (external link)" href="https://www.linkedin.com/in/bonny-boet-7950b3147/" target="_blank"><i class="fab fa-instagram-square fa-lg"></i> LinkedIn</a></p>
@@ -235,15 +240,15 @@
 
       <div class="col-sm-6" data-aos="fade-up" data-aos-duration="1500">
 
-        <h5>...or send me an e-mail!</h5>
+        <h5>E-mail</h5>
 
-        <p>If you'd like to contact me directly, please send me an e-mail using the contact form below.</p>
+        <p>メッセージを待っております！</p>
 
         <form action="https://formspree.io/f/xbjqragd" method="POST" id="survey-form">
 
             <div class="form-group">
-              <label for="name" id="name-label" class="form-question">Name: </label>
-              <input type="text" id="name" name="name-label" placeholder="Name" required>
+              <label for="name" id="name-label" class="form-question">お名前: </label>
+              <input type="text" id="name" name="name-label" placeholder="お名前" required>
             </div>
 
             <div class="form-group">
@@ -253,11 +258,11 @@
 
             <div class="form-group">
               <label for="message" id="email-label" class="form-question">Message:</label>
-              <textarea id="message" name="message" placeholder="Message"></textarea>
+              <textarea id="message" name="message" placeholder="メッセージ"></textarea>
             </div>
 
             <div class="form-group">
-              <button id="submit" onclick="sendEmail()" type="submit">Submit</button>
+              <button id="submit" onclick="sendEmail()" type="submit">送信</button>
             </div>
 
         </form>
