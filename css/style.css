@@ -118,12 +118,19 @@ nav a {
 
 }
 
-nav a:hover {
+nav.desktop a:hover {
   color: #4B4B4B;
   text-decoration: none;
   border-bottom: 10px solid #FFFFFF;
   transition: 0.2s;
 }
+
+nav.mobile a:hover {
+  color: #4B4B4B;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
 
 /* end navigation */
 
@@ -490,6 +497,10 @@ footer {
           border-radius: 5px;
         }
 
+        #mobile-opentoclose {
+          padding: 3em 2em 2em 2em;
+        }
+
         nav.mobile {
           display: none;
           position: fixed;
@@ -509,7 +520,7 @@ footer {
         display: flex;
         flex-direction: column;
         line-height: 5em;
-                  z-index: 2200;
+        z-index: 2200;
         }
 
         #switchlang-to-jp {
