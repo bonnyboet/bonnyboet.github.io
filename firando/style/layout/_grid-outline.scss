@@ -1,0 +1,117 @@
+/*grid outline */
+.sectionheader {
+position: relative;
+grid-area: hd;
+width: 100%;
+}
+
+.black {
+  background-color: $black;
+  color: $white;
+}
+
+.left {
+  grid-area: left;
+}
+
+.right {
+  grid-area: right;
+}
+
+.sectionsubheader {
+position: relative;
+grid-area: subhd;
+width: 100%;
+
+  &2 {
+    grid-area: subhd2;
+  }
+
+  &3 {
+    grid-area: subhd3;
+  }
+
+  &4 {
+    grid-area: subhd4;
+  }
+
+  &5 {
+    grid-area: subhd5;
+  }
+
+  &6 {
+    grid-area: subhd6;
+  }
+
+  &7 {
+    grid-area: subhd7;
+  }
+}
+
+
+.sectioncontent {
+  position: relative;
+  grid-area: p;
+
+  &2 {
+  grid-area: p2;
+
+  }
+  &3 {
+  grid-area: p3;
+  }
+  &4 {
+  grid-area: p4;
+  }
+  &5 {
+  grid-area: p5;
+  }
+  &6 {
+  grid-area: p6;
+  }
+  &7 {
+  grid-area: p7;
+  }
+}
+
+
+.sectionphoto {
+  position: relative;
+  grid-area: img;
+
+  & img {
+  position: relative;
+  }
+
+  &2 {
+  grid-area: img2;
+  position: relative;
+  }
+
+  &3 {
+  grid-area: img3;
+  position: relative;
+  }
+
+  &4 {
+  grid-area: img4;
+  position: relative;
+  }
+
+  &5 {
+  grid-area: img5;
+  position: relative;
+  }
+}
+
+.section-background {
+  grid-area: bg;
+
+  &2 {
+  grid-area: bg2;
+  }
+
+  &3 {
+  grid-area: bg3;
+  }
+}

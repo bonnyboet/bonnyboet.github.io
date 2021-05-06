@@ -1,0 +1,61 @@
+html {
+  @include sgl-html($font-size: $sgl-base-font-size);
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  @include sgl-body($line-height-step: 1.8, $unit: $sgl-base-unit);
+  font-family: 'Karla', sans-serif;
+  letter-spacing: 0.5px;
+}
+
+h1{
+    @include sgl-heading(3, 0, 0, 2);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+
+    @include for-tablet-portrait-up {
+      @include sgl-heading(5, 0, 0, 2);
+      font-weight: 600;
+    };
+}
+
+h2{
+@include sgl-heading(3, 0, 1, 0.5);
+}
+
+h3{
+@include sgl-heading(2, 0, 1, 2);
+}
+
+h4{
+@include sgl-heading(1, 0, 1, 2);
+}
+
+h2, h3, h4, h5 {
+font-weight: 600;
+font-family: 'Kosugi Maru', sans-serif;
+}
+p,
+ol,
+pre,
+table,
+img,
+blockquote
+{
+  @include sgl-margins(2, 1);
+}
+
+.nomargins
+  {
+    @include sgl-margins(0, 0);
+  }
+
+ul ul,
+ol ol,
+ul ol,
+ol ul,
+ {
+  @include sgl-margins(2, 1);
+}

@@ -1,0 +1,108 @@
+.containerblack {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  height:100%;
+  background-color: $black;
+  color: $white;
+}
+
+.index-hero {
+  position: relative;
+  top: 3em;
+  width: 100%;
+  z-index: 2000;
+  display: grid;
+  grid-template-columns: 0% 100% 0%;
+  grid-gap: 0;
+  grid-template-rows: 95vh;
+  grid-template-areas: "p p2 p3";
+
+  @include for-tablet-portrait-up {
+    top: 0;
+    grid-template-columns: 11% 78% 11%;
+    grid-template-rows: 90vh;
+    grid-template-areas: "p p2 p3";
+  }
+}
+
+.hero {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  background-color: $white;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  background-image: url(assets/mobile-hero.jpg);
+
+  @include for-tablet-portrait-up {
+    background-image: url(assets/index-hero-2.jpg);
+    justify-content: center;
+    padding-left: 2em;
+  }
+
+  & p {
+    max-width: 50%;
+    padding-left: 0.5em;
+    top: 5em;
+    font-family: 'Roboto Slab', serif;
+    position: relative;
+    line-height: 2;
+    text-align: center;
+    align-self: center;
+
+    @include for-tablet-portrait-up {
+      text-align: left;
+      align-self: flex-start;
+      top: 0em;
+      max-width: 30%;
+      line-height: 1.5;
+    }
+
+  }
+}
+
+.topheader-mobile {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 2200;
+  background-color: white;
+  padding-left: 0.5em;
+  height: 2.5em;
+  justify-content: center;
+  @include for-tablet-portrait-up {
+    display: none;
+  }
+}
+
+.topheader-desktop {
+    display: none;
+    @include for-tablet-portrait-up {
+      display: flex;
+    }
+}
+
+
+
+/*about section */
+
+.index-about {
+  position: relative;
+  top: 3em;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: auto auto;
+  grid-gap: 0;
+  grid-template-areas: "p" "img";
+
+  @include for-tablet-portrait-up {
+    top: 0;
+    grid-template-columns: 50% 50%;
+    grid-template-columns: auto auto;
+    grid-template-areas: "p img";
+  }
+}
